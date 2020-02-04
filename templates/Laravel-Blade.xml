@@ -129,10 +129,17 @@
       <option name="JSP" value="false" />
     </context>
   </template>
-  <template name="bldelete" value="&lt;form class=&quot;d-inline-block&quot; action=&quot;{{ route('$routeName$', $$$modelObject$) }}&quot;&#10;                                  method=&quot;post&quot;&gt;&#10;                                @csrf&#10;                                @method(&quot;DELETE&quot;)&#10;                                &lt;button class=&quot;btn btn-outline-danger btn-sm&quot; type=&quot;submit&quot;&gt;&#10;                                    $Delete$&#10;                                    &lt;i class=&quot;fas fa-trash-alt&quot;&gt;&lt;/i&gt;&#10;                                &lt;/button&gt;&#10;                            &lt;/form&gt;" toReformat="true" toShortenFQNames="true">
+  <template name="bldelete" value="&lt;form class=&quot;d-inline-block&quot; action=&quot;{{ route('$routeName$', $$$modelObject$) }}&quot;&#10;                                  method=&quot;post&quot;&gt;&#10;                                @csrf&#10;                                @method(&quot;DELETE&quot;)&#10;                                &lt;button class=&quot;btn btn-outline-danger btn-sm&quot; type=&quot;submit&quot;&gt;&#10;                                    $Delete$&#10;                                    &lt;i class=&quot;fas fa-trash-alt&quot;&gt;&lt;/i&gt;&#10;                                &lt;/button&gt;&#10;                            &lt;/form&gt;" description="" toReformat="true" toShortenFQNames="true">
     <variable name="routeName" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="modelObject" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="Delete" expression="" defaultValue="Delete" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="true" />
+    </context>
+  </template>
+  <template name="btext" value="&lt;div class=&quot;form-group&quot;&gt;&#10;                &lt;label for=&quot;$field$&quot;&gt;&#10;                    $fieldName$:&#10;                &lt;/label&gt;&#10;                &lt;textarea&#10;                    class=&quot;form-control&quot;&#10;                    name=&quot;$field$&quot;&#10;                    id=&quot;$field$&quot;&#10;                    cols=&quot;30&quot;&#10;                    rows=&quot;10&quot;&gt;&lt;/textarea&gt;&#10;            &lt;/div&gt;" toReformat="true" toShortenFQNames="true">
+    <variable name="field" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="fieldName" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="HTML_TEXT" value="true" />
     </context>

@@ -14,10 +14,4 @@
       <option name="VUE_INSIDE_TAG" value="true" />
     </context>
   </template>
-  <template name="&lt;abbreviation&gt;" value="&lt;?= $var ?&gt;" description="" toReformat="true" toShortenFQNames="true">
-    <context>
-      <option name="HTML_TEXT" value="true" />
-      <option name="VUE_TEMPLATE" value="true" />
-    </context>
-  </template>
 </templateSet>
