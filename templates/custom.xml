@@ -1,5 +1,5 @@
 <templateSet group="custom">
-  <template name="psr4" value="&quot;psr-4&quot;: {&#10;        &quot;App\\&quot;: &quot;app/&quot;&#10;        }" toReformat="true" toShortenFQNames="true">
+  <template name="psr4" value="&quot;psr-4&quot;: {&#10;        &quot;App\\&quot;: &quot;app/&quot;&#10;        }" description="" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="JSON" value="true" />
       <option name="JSON_PROPERTY_KEYS" value="false" />
