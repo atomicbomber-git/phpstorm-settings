@@ -14,4 +14,7 @@
   <action id="SelectInProjectView">
     <keyboard-shortcut first-keystroke="shift ctrl slash" />
   </action>
+  <action id="StructuralSearchPlugin.StructuralReplaceAction">
+    <keyboard-shortcut first-keystroke="alt h" />
+  </action>
 </keymap>
