@@ -1,10 +1,16 @@
 <application>
   <component name="MaterialThemeConfig">
+    <option name="compactDropdowns" value="true" />
+    <option name="isCompactMenus" value="true" />
+    <option name="isCompactTables" value="true" />
+    <option name="isContrastMode" value="true" />
     <option name="isHighContrast" value="true" />
     <option name="isWizardShown" value="true" />
-    <option name="accentColor" value="2979ff" />
-    <option name="selectedTheme" value="ONE_LIGHT" />
-    <option name="userId" value="6a61630a:1702ccea508:-8000" />
+    <option name="overrideAccentColor" value="false" />
+    <option name="pristineConfig" value="false" />
+    <option name="accentColor" value="79cb60" />
+    <option name="selectedTheme" value="GITHUB" />
+    <option name="userId" value="528c11ed:1702da4e1e6:-8000" />
     <option name="version" value="4.11.5" />
   </component>
 </application>
