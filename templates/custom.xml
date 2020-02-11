@@ -6,7 +6,7 @@
       <option name="JSON_STRING_VALUES" value="false" />
     </context>
   </template>
-  <template name="laravel-foreign-key" value="$table-&gt;unsignedInteger('$entity$_id')-&gt;index();&#10;$table-&gt;foreign('$entity$_id')-&gt;references('id')-&gt;on('$entity$s');" toReformat="true" toShortenFQNames="true">
+  <template name="laravel-foreign-key" value="$table-&gt;unsignedInteger('$entity$_id')-&gt;index();&#10;$table-&gt;foreign('$entity$_id')-&gt;references('id')-&gt;on('$entity$s');" description="" toReformat="true" toShortenFQNames="true">
     <variable name="entity" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="PHP Expression" value="true" />
