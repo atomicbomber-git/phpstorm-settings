@@ -6,6 +6,13 @@
       <option name="JSP" value="true" />
     </context>
   </template>
+  <template name="fa4-sign-in" value="&lt;i class=&quot;fa fa-sign-in$1$&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;$END$" description="Sign In" toReformat="true" toShortenFQNames="false">
+    <variable name="1" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="GSP" value="true" />
+      <option name="JSP" value="true" />
+    </context>
+  </template>
   <template name="fa4-trash-o" value="&lt;i class=&quot;fa fa-trash-o$1$&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;$END$" description="Trash Outlined" toReformat="true" toShortenFQNames="false">
     <variable name="1" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
