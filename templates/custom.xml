@@ -38,4 +38,11 @@
       <option name="PHP Statement" value="true" />
     </context>
   </template>
+  <template name="jqvpost" value="$.post(this.submit_url, {token: window.token, ...this.final_form})&#10;    .done(response =&gt; {&#10;        this.error_data = null;&#10;        window.location.replace(this.redirect_url);&#10;    })&#10;    .fail((xhr, status, error) =&gt; {&#10;        let response = JSON.parse(xhr.responseText);&#10;        this.error_data = response.data;&#10;    });" description="jQuery Vue AJAX POST" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="ES6_STATEMENT" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+      <option name="VUE_COMPONENT_DESCRIPTOR" value="true" />
+    </context>
+  </template>
 </templateSet>
