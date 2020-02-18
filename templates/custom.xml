@@ -29,4 +29,20 @@
       <option name="VUE_TEMPLATE" value="true" />
     </context>
   </template>
+  <template name="rredirect" value="return redirect()&#10;    -&gt;route(&quot;$entity$.$action$&quot;, $$$entity$)&#10;    -&gt;with(&quot;messages&quot;, [&#10;        [&#10;            &quot;state&quot; =&gt; MessageState::STATE_SUCCESS,&#10;            &quot;content&quot; =&gt; __(&quot;messages.$action2$.success&quot;)&#10;        ]&#10;    ]);" description="" toReformat="true" toShortenFQNames="true">
+    <variable name="entity" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="action" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="action2" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP Expression" value="true" />
+      <option name="PHP Statement" value="true" />
+    </context>
+  </template>
+  <template name="jqvpost" value="$.post(this.submit_url, {token: window.token, ...this.final_form})&#10;    .done(response =&gt; {&#10;        this.error_data = null;&#10;        window.location.replace(this.redirect_url);&#10;    })&#10;    .fail((xhr, status, error) =&gt; {&#10;        let response = JSON.parse(xhr.responseText);&#10;        this.error_data = response.data;&#10;    });" description="jQuery Vue AJAX POST" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="ES6_STATEMENT" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+      <option name="VUE_COMPONENT_DESCRIPTOR" value="true" />
+    </context>
+  </template>
 </templateSet>

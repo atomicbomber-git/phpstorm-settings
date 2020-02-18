@@ -1,20 +1,14 @@
 <keymap version="1" name="VSCode copy" parent="VSCode">
-  <action id="CloseAllEditorsButActive">
-    <keyboard-shortcut first-keystroke="shift ctrl back_space" />
-  </action>
-  <action id="GotoTest">
-    <keyboard-shortcut first-keystroke="shift ctrl alt t" />
+  <action id="ActivateDatabaseToolWindow">
+    <keyboard-shortcut first-keystroke="shift ctrl alt space" />
   </action>
   <action id="ManageRecentProjects">
     <keyboard-shortcut first-keystroke="shift ctrl j" />
-  </action>
-  <action id="SaveAsTemplate">
-    <keyboard-shortcut first-keystroke="shift ctrl alt s" />
   </action>
   <action id="SelectInProjectView">
     <keyboard-shortcut first-keystroke="shift ctrl slash" />
   </action>
   <action id="StructuralSearchPlugin.StructuralReplaceAction">
-    <keyboard-shortcut first-keystroke="alt h" />
+    <keyboard-shortcut first-keystroke="shift alt h" />
   </action>
 </keymap>
