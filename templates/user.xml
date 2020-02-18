@@ -14,9 +14,4 @@
       <option name="VUE_INSIDE_TAG" value="true" />
     </context>
   </template>
-  <template name="&lt;abbreviation&gt;" value="&lt;div class=&quot;form-group&quot;&gt;&#10;                    &lt;label for=&quot;judul&quot;&gt;&#10;                        Judul:&#10;                    &lt;/label&gt;&#10;                    &lt;textarea&#10;                        class=&quot;form-control {{ $errors-&gt;has(&quot;judul&quot;) ? &quot;is-invalid&quot; : &quot;&quot; }}&quot;&#10;                        name=&quot;judul&quot;&#10;                        id=&quot;judul&quot;&#10;                        cols=&quot;30&quot;&#10;                        rows=&quot;10&quot;&gt;&lt;/textarea&gt;&#10;                    &lt;span class=&quot;invalid-feedback&quot;&gt;&#10;                        {{ $errors-&gt;first(&quot;judul&quot;) }}&#10;                    &lt;/span&gt;&#10;                &lt;/div&gt;" description="" toReformat="true" toShortenFQNames="true">
-    <context>
-      <option name="HTML_TEXT" value="true" />
-    </context>
-  </template>
 </templateSet>
