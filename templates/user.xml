@@ -14,4 +14,11 @@
       <option name="VUE_INSIDE_TAG" value="true" />
     </context>
   </template>
+  <template name="blade-section" value="@section(&quot;$section$&quot;)&#10;    $content$&#10;@endsection" description="Blade Section" toReformat="true" toShortenFQNames="true">
+    <variable name="section" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="content" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="true" />
+    </context>
+  </template>
 </templateSet>
