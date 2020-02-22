@@ -14,7 +14,7 @@
       <option name="VUE_TEMPLATE" value="true" />
     </context>
   </template>
-  <template name="mbinput" value="&lt;div class=&quot;form-group&quot;&gt;&#10;    &lt;label for=&quot;$field$&quot;&gt; $Label$: &lt;/label&gt;&#10;    &lt;input name=&quot;$field$&quot;&#10;           id=&quot;$field$&quot;&#10;           type=&quot;text&quot;&#10;           class=&quot;form-control &lt;?= $this-&gt;has_error(&quot;$field$&quot;) ? &quot;error&quot; : &quot;&quot; ?&gt;&quot;&#10;           placeholder=&quot;$Label$&quot;&#10;           value=&quot;&lt;?= $this-&gt;old(&quot;$field$&quot;) ?&gt;&quot;&gt;&#10;    &lt;?php if ($this-&gt;has_error(&quot;$field$&quot;)) : ?&gt;&#10;        &lt;label class='error'&gt;&#10;            &lt;?= $this-&gt;error(&quot;$field$&quot;)[0] ?? '' ?&gt;&#10;        &lt;/label&gt;&#10;    &lt;?php endif ?&gt;&#10;&lt;/div&gt;" description="" toReformat="true" toShortenFQNames="true">
+  <template name="mbinput" value="&lt;div class=&quot;form-group&quot;&gt;&#10;    &lt;label for=&quot;$field$&quot;&gt; $Label$: &lt;/label&gt;&#10;    &lt;input name=&quot;$field$&quot;&#10;           id=&quot;$field$&quot;&#10;           type=&quot;text&quot;&#10;           class=&quot;form-control &lt;?= $errors-&gt;has(&quot;$field$&quot;) ? &quot;error&quot; : &quot;&quot; ?&gt;&quot;&#10;           placeholder=&quot;$Label$&quot;&#10;           value=&quot;&lt;?= $this-&gt;old(&quot;$field$&quot;) ?&gt;&quot;&gt;&#10;    &lt;?php if ($errors-&gt;has(&quot;$field$&quot;)) : ?&gt;&#10;        &lt;label class='error'&gt;&#10;            &lt;?= $errors-&gt;first(&quot;$field$&quot;) ?&gt;&#10;        &lt;/label&gt;&#10;    &lt;?php endif ?&gt;&#10;&lt;/div&gt;" description="" toReformat="true" toShortenFQNames="true">
     <variable name="field" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="Label" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
@@ -33,6 +33,25 @@
     <variable name="rules" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="Model" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="route" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP Expression" value="true" />
+      <option name="PHP Statement" value="true" />
+    </context>
+  </template>
+  <template name="mbformdelete" value="&lt;form class=&quot;d-inline-block confirmed&quot;&#10;      method=&quot;POST&quot;&#10;      action=&quot;&lt;?= base_url(&quot;$actionUrl$&quot;) ?&gt;&quot;&gt;&#10;    &lt;input type=&quot;hidden&quot;&#10;           name=&quot;&lt;?= $this-&gt;csrf_name() ?&gt;&quot;&#10;           value=&quot;&lt;?= $this-&gt;csrf_token() ?&gt;&quot;&gt;&#10;    &lt;button class=&quot;btn btn-danger btn-sm&quot;&gt;&#10;        Hapus&#10;    &lt;/button&gt;&#10;&lt;/form&gt;" description="Milestone Bootstrap Form Delete" toReformat="true" toShortenFQNames="true">
+    <variable name="actionUrl" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="true" />
+      <option name="VUE_TEMPLATE" value="true" />
+    </context>
+  </template>
+  <template name="mbgettranslator" value="/** @var \Illuminate\Contracts\Translation\\Illuminate\Contracts\Translation\Translator $translator */&#10;$translator = resolve(\Illuminate\Contracts\Translation\Translator::class);" description="Get Dynamically Resolved Translator" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="PHP Expression" value="true" />
+      <option name="PHP Statement" value="true" />
+    </context>
+  </template>
+  <template name="mbflashmessage" value="resolve(\CI_Controller::class)&#10;    -&gt;session&#10;    -&gt;set_flashdata('message-success', $translator-&gt;get(&quot;action.create.success&quot;));" description="Flash Message" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="PHP Expression" value="true" />
       <option name="PHP Statement" value="true" />
