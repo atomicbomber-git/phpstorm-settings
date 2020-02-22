@@ -29,7 +29,7 @@
       <option name="VUE_TEMPLATE" value="true" />
     </context>
   </template>
-  <template name="mbcreate" value="/** @var Translator $translator */&#10;$translator = resolve(Translator::class);&#10;&#10;/** @var \Illuminate\Contracts\Validation\\Illuminate\Contracts\Validation\Validator $validator */&#10;$validator = resolve(\Illuminate\Validation\Contracts\Factory::class)&#10;    -&gt;make(resolve(\Illuminate\Http\Request::class)-&gt;all(), [&#10;        $rules$&#10;    ]);&#10;&#10;$validator-&gt;fails() &amp;&amp; $this-&gt;errorUnprocessed($validator-&gt;errors());&#10;$data = $validator-&gt;validated();&#10;&#10;$Model$::create($data);&#10;&#10;resolve(\CI_Controller::class)&#10;    -&gt;session&#10;    -&gt;set_flashdata('message-success', $translator-&gt;get(&quot;action.create.success&quot;));&#10;&#10;$this-&gt;redirectBack(base_url(&quot;$route$&quot;));" description="Milestone Bootstrap Create Controller" toReformat="true" toShortenFQNames="true">
+  <template name="mbcreate" value="/** @var Translator $translator */&#10;$translator = resolve(Translator::class);&#10;&#10;/** @var \Illuminate\Contracts\Validation\Factory $validator */&#10;$validator = resolve(\Illuminate\Contracts\Validation\Factory::class)&#10;    -&gt;make(resolve(\Illuminate\Http\Request::class)-&gt;all(), [&#10;        $rules$&#10;    ]);&#10;&#10;$validator-&gt;fails() &amp;&amp; $this-&gt;errorUnprocessed($validator-&gt;errors());&#10;$data = $validator-&gt;validated();&#10;&#10;$Model$::create($data);&#10;&#10;resolve(\CI_Controller::class)&#10;    -&gt;session&#10;    -&gt;set_flashdata('message-success', $translator-&gt;get(&quot;action.create.success&quot;));&#10;&#10;$this-&gt;redirect(base_url(&quot;$route$&quot;));" description="Milestone Bootstrap Create Controller" toReformat="true" toShortenFQNames="true">
     <variable name="rules" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="Model" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="route" expression="" defaultValue="" alwaysStopAt="true" />
@@ -55,6 +55,20 @@
     <context>
       <option name="PHP Expression" value="true" />
       <option name="PHP Statement" value="true" />
+    </context>
+  </template>
+  <template name="mbbtnsubmit" value="&lt;div class=&quot;d:f j-c:f-e&quot;&gt;&#10;    &lt;button type=&quot;submit&quot; class=&quot;btn btn-primary&quot;&gt;&#10;        Submit&#10;    &lt;/button&gt;&#10;&lt;/div&gt;" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="HTML_TEXT" value="true" />
+      <option name="VUE_TEMPLATE" value="true" />
+    </context>
+  </template>
+  <template name="vmbmult" value="&lt;div class=&quot;form-group&quot;&gt;&#10;    &lt;label for=&quot;$entity$&quot;&gt;&#10;        $Label$:&#10;    &lt;/label&gt;&#10;&#10;    &lt;multiselect&#10;            id=&quot;$entity$&quot;&#10;            placeholder=&quot;$Label$&quot;&#10;            :allow-empty=&quot;true&quot;&#10;            selectLabel=&quot;&quot;&#10;            selectedLabel=&quot;&quot;&#10;            deselectLabel=&quot;&quot;&#10;            track-by=&quot;id&quot;&#10;            label=&quot;name&quot;&#10;            :options=&quot;$entity$s&quot;&#10;            v-model=&quot;$entity$&quot;&#10;    &gt;&lt;/multiselect&gt;&#10;&lt;/div&gt;" toReformat="true" toShortenFQNames="true">
+    <variable name="entity" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="Label" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="true" />
+      <option name="VUE_TEMPLATE" value="true" />
     </context>
   </template>
 </templateSet>
