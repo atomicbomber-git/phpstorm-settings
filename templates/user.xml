@@ -11,8 +11,6 @@
     <variable name="var" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="HTML" value="true" />
-      <option name="JS_EXPRESSION" value="true" />
-      <option name="TS_EXPRESSION" value="true" />
       <option name="VUE_INSIDE_TAG" value="true" />
     </context>
   </template>
@@ -23,25 +21,23 @@
       <option name="HTML_TEXT" value="true" />
     </context>
   </template>
-  <template name="mbupdate" value="public function update($entity_id$)&#10;{&#10;    if (($item_type = $EntityClass$::find($entity_id$)) === null) {&#10;        $this-&gt;error404();&#10;    }&#10;&#10;    /** @var Translator $translator */&#10;    $translator = resolve(Translator::class);&#10;&#10;    /** @var Factory $validator */&#10;    $validator = resolve(Factory::class)&#10;        -&gt;make(resolve(Request::class)-&gt;all(), [&#10;            &quot;name&quot; =&gt; &quot;required|string|unique:item_types,name,{$entity_id$}&quot;&#10;        ]);&#10;&#10;    $validator-&gt;fails() &amp;&amp; $this-&gt;errorUnprocessed($validator-&gt;errors());&#10;    $item_type-&gt;update($validator-&gt;validated());&#10;&#10;    resolve(CI_Controller::class)&#10;        -&gt;session&#10;        -&gt;set_flashdata('message-success', $translator-&gt;get(&quot;action.update.success&quot;));&#10;&#10;    $this-&gt;redirect(base_url(&quot;$entityPath$/edit/{$item_type-&gt;id}&quot;));&#10;}" description="MB Controller Update" toReformat="true" toShortenFQNames="true">
-    <variable name="entity_id" expression="" defaultValue="$entity_id" alwaysStopAt="true" />
-    <variable name="EntityClass" expression="" defaultValue="EntityClass" alwaysStopAt="true" />
-    <variable name="entityPath" expression="" defaultValue="entityPath" alwaysStopAt="true" />
-    <context>
-      <option name="PHP Class Member" value="true" />
-    </context>
-  </template>
-  <template name="phpif" value="&lt;?php if ($expression$): ?&gt;&#10;&lt;?php endif ?&gt;" description="" toReformat="true" toShortenFQNames="true">
-    <variable name="expression" expression="" defaultValue="" alwaysStopAt="true" />
+  <template name="ukinput" value="&lt;div class=&quot;uk-margin&quot;&gt;&#10;    &lt;label class=&quot;uk-form-label&quot;&#10;           for=&quot;$field$&quot;&gt; $Label$&#10;    &lt;/label&gt;&#10;    &lt;div class=&quot;uk-form-controls&quot;&gt;&#10;        &lt;input&#10;            id=&quot;$field$&quot;&#10;            name=&quot;$field$&quot;&#10;            placeholder=&quot;$Label$&quot;&#10;            value=&quot;{{ old(&quot;$field$&quot;) }}&quot;&#10;            type=&quot;text&quot;&#10;            class=&quot;uk-input {{ $errors-&gt;has(&quot;$field$&quot;) ? &quot;uk-form-danger&quot; : &quot;&quot; }}&quot;&gt;&#10;&#10;        &lt;?php foreach($errors-&gt;get(&quot;$field$&quot;) as $error): ?&gt;&#10;            &lt;span class=&quot;uk-text-danger uk-text-small&quot;&gt;&#10;                {{ $error }}&#10;            &lt;/span&gt;&#10;        &lt;?php endforeach; ?&gt;&#10;    &lt;/div&gt;&#10;&lt;/div&gt;" description="UIKit Input" toReformat="true" toShortenFQNames="true">
+    <variable name="field" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="Label" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="HTML_TEXT" value="true" />
-      <option name="VUE_TEMPLATE" value="true" />
     </context>
   </template>
-  <template name="&lt;abbreviation&gt;" value="ddsffd" description="" toReformat="true" toShortenFQNames="true">
+  <template name="uktextarea" value="&lt;div class=&quot;uk-margin&quot;&gt;&#10;    &lt;label for=&quot;$field$&quot;&#10;           class=&quot;uk-form-label&quot;&gt; $Label$&#10;    &lt;/label&gt;&#10;&#10;    &lt;div class=&quot;uk-form-controls&quot;&gt;&#10;            &lt;textarea&#10;                id=&quot;$field$&quot;&#10;                rows=&quot;4&quot;&#10;                name=&quot;$field$&quot;&#10;                placeholder=&quot;$Label$&quot;&#10;                type=&quot;text&quot;&#10;                class=&quot;uk-textarea {{ $errors-&gt;has(&quot;$field$&quot;) ? &quot;uk-form-danger&quot; : &quot;&quot; }}&quot;&gt;{{ old(&quot;$field$&quot;) }}&lt;/textarea&gt;&#10;    &lt;/div&gt;&#10;&#10;    &lt;?php foreach($errors-&gt;get(&quot;$field$&quot;) as $error): ?&gt;&#10;        &lt;span class=&quot;uk-text-danger uk-text-small&quot;&gt;&#10;            {{ $error }}&#10;        &lt;/span&gt;&#10;    &lt;?php endforeach; ?&gt;&#10;&lt;/div&gt;" description="UIKit Textarea" toReformat="true" toShortenFQNames="true">
+    <variable name="field" expression="" defaultValue="field" alwaysStopAt="true" />
+    <variable name="Label" expression="" defaultValue="Label" alwaysStopAt="true" />
     <context>
-      <option name="ES6_EXPRESSION" value="true" />
-      <option name="JS_EXPRESSION" value="true" />
+      <option name="HTML_TEXT" value="true" />
+    </context>
+  </template>
+  <template name="ukformsubmit" value="&lt;div class=&quot;uk-margin uk-flex uk-flex-right&quot;&gt;&#10;    &lt;button class=&quot;uk-button uk-button-primary&quot;&#10;            type=&quot;submit&quot;&gt;&#10;        Submit&#10;    &lt;/button&gt;&#10;&lt;/div&gt;" description="UIKit Form Submit" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="HTML_TEXT" value="true" />
     </context>
   </template>
 </templateSet>
