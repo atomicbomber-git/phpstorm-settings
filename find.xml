@@ -1,7 +1,7 @@
 <application>
   <component name="FindSettings">
-    <option name="customScope" value="File '.../routes/testing.php'" />
-    <option name="defaultScopeName" value="File '.../routes/testing.php'" />
-    <option name="SEARCH_SCOPE" value="File '.../routes/testing.php'" />
+    <option name="customScope" value="File '.../application/controllers/StockRequestPrint.php'" />
+    <option name="defaultScopeName" value="File '.../application/controllers/StockRequestPrint.php'" />
+    <option name="SEARCH_SCOPE" value="File '.../application/controllers/StockRequestPrint.php'" />
   </component>
 </application>

@@ -71,4 +71,10 @@
       <option name="VUE_TEMPLATE" value="true" />
     </context>
   </template>
+  <template name="mbtemplateengine" value="/** @var \App\Contracts\\App\Contracts\TemplateEngine $templateEngine */&#10;$templateEngine = resolve(\App\Contracts\TemplateEngine::class);" description="Template Engine" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="PHP Expression" value="true" />
+      <option name="PHP Statement" value="true" />
+    </context>
+  </template>
 </templateSet>
