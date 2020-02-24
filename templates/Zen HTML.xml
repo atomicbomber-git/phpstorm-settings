@@ -1,5 +1,10 @@
 <templateSet group="Zen HTML">
-  <template name="link" value="&lt;link rel=&quot;stylesheet&quot; href=&quot;$END$&quot;&gt;" description="&lt;link rel=&quot;stylesheet&quot; href=&quot;...&quot;&gt;" toReformat="true" toShortenFQNames="true">
+  <template name="label" value="&lt;label for=&quot;$VAR0$&quot;&gt;$END$&lt;/label&gt;" description="&lt;label for=&quot;...&quot;&gt;...&lt;/label&gt;" toReformat="true" toShortenFQNames="true">
+    <variable name="VAR0" expression="" defaultValue="&quot;&quot;" alwaysStopAt="true" />
+    <context />
+  </template>
+  <template name="input" value="&lt;input type=&quot;$VAR0$&quot;&gt;" description="&lt;input type=&quot;...&quot;&gt;" toReformat="true" toShortenFQNames="true">
+    <variable name="VAR0" expression="" defaultValue="&quot;text&quot;" alwaysStopAt="true" />
     <context />
   </template>
   <template name="!!!" value="&lt;!doctype html&gt;" description="&lt;!doctype html&gt;" toReformat="true" toShortenFQNames="true">
@@ -95,6 +100,9 @@
     <context />
   </template>
   <template name="col" value="&lt;col&gt;" description="&lt;col&gt;" toReformat="true" toShortenFQNames="true">
+    <context />
+  </template>
+  <template name="link" value="&lt;link rel=&quot;stylesheet&quot; href=&quot;$END$&quot;&gt;" description="&lt;link rel=&quot;stylesheet&quot; href=&quot;...&quot;&gt;" toReformat="true" toShortenFQNames="true">
     <context />
   </template>
   <template name="link:css" value="&lt;link rel=&quot;stylesheet&quot; href=&quot;$STYLE$.css&quot; &gt;" description="&lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot; &gt;" toReformat="true" toShortenFQNames="true">
@@ -339,16 +347,16 @@
     <variable name="VAR2" expression="" defaultValue="&quot;&quot;" alwaysStopAt="true" />
     <context />
   </template>
+  <template name="form" value="&lt;form action=&quot;$VAR0$&quot;&gt;$END$&lt;/form&gt;" description="&lt;form action=&quot;...&quot;&gt;...&lt;/form&gt;" toReformat="true" toShortenFQNames="true">
+    <variable name="VAR0" expression="" defaultValue="&quot;&quot;" alwaysStopAt="true" />
+    <context />
+  </template>
   <template name="form:get" value="&lt;form action=&quot;$VAR0$&quot; method=&quot;get&quot;&gt;$END$&lt;/form&gt;" description="&lt;form action=&quot;...&quot; method=&quot;get&quot;&gt;...&lt;/form&gt;" toReformat="true" toShortenFQNames="true">
     <variable name="VAR0" expression="" defaultValue="&quot;&quot;" alwaysStopAt="true" />
     <context />
   </template>
-  <template name="label" value="&lt;label for=&quot;$VAR0$&quot;&gt;$END$&lt;/label&gt;" description="&lt;label for=&quot;...&quot;&gt;...&lt;/label&gt;" toReformat="true" toShortenFQNames="true">
+  <template name="form:post" value="&lt;form action=&quot;$VAR0$&quot; method=&quot;post&quot;&gt;$END$&lt;/form&gt;" description="&lt;form action=&quot;...&quot; method=&quot;post&quot;&gt;...&lt;/form&gt;" toReformat="true" toShortenFQNames="true">
     <variable name="VAR0" expression="" defaultValue="&quot;&quot;" alwaysStopAt="true" />
-    <context />
-  </template>
-  <template name="input" value="&lt;input type=&quot;$VAR0$&quot;&gt;" description="&lt;input type=&quot;...&quot;&gt;" toReformat="true" toShortenFQNames="true">
-    <variable name="VAR0" expression="" defaultValue="&quot;text&quot;" alwaysStopAt="true" />
     <context />
   </template>
   <template name="inp" value="&lt;input type=&quot;$VAR0$&quot; name=&quot;$NAME$&quot; id=&quot;$ID$&quot;&gt;" description="&lt;input type=&quot;...&quot; name=&quot;...&quot; id=&quot;...&quot;&gt;" toReformat="true" toShortenFQNames="true">
@@ -936,10 +944,6 @@
     <context />
   </template>
   <template name="li" value="&lt;li&gt;$END$&lt;/li&gt;" description="&lt;li&gt;...&lt;/li&gt;" toReformat="false" toShortenFQNames="true">
-    <context />
-  </template>
-  <template name="form:post" value="&lt;form action=&quot;$VAR0$&quot; method=&quot;post&quot;&gt;$END$&lt;/form&gt;" description="&lt;form action=&quot;...&quot; method=&quot;post&quot;&gt;...&lt;/form&gt;" toReformat="true" toShortenFQNames="true">
-    <variable name="VAR0" expression="" defaultValue="&quot;&quot;" alwaysStopAt="true" />
     <context />
   </template>
 </templateSet>
