@@ -38,10 +38,4 @@
       <option name="PHP Statement" value="true" />
     </context>
   </template>
-  <template name="mbtemp" value="/** @var TemplateEngine $templateEngine */&#10;$templateEngine = resolve(TemplateEngine::class);" description="MB Template Engine" toReformat="true" toShortenFQNames="true">
-    <context>
-      <option name="PHP Expression" value="true" />
-      <option name="PHP Statement" value="true" />
-    </context>
-  </template>
 </templateSet>
