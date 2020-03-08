@@ -38,8 +38,12 @@
           <option name="url" value="https://github.com/abdussalamwahid/bpspk_erekom" />
           <option name="userName" value="" />
         </UrlAndUserName>
+        <UrlAndUserName>
+          <option name="url" value="https://github.com/receipt-print-hq/escpos-tools" />
+          <option name="userName" value="" />
+        </UrlAndUserName>
       </list>
     </option>
-    <option name="cloneParentDir" value="$USER_HOME$/clones" />
+    <option name="cloneParentDir" value="$USER_HOME$/projects" />
   </component>
 </application>
