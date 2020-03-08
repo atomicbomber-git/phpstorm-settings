@@ -1,7 +1,4 @@
 <templateSet group="Zen HTML">
-  <template name="table+" value="&lt;table&gt;&#10;&lt;tr&gt;&#10;&lt;td&gt;$END$&lt;/td&gt;&#10;&lt;/tr&gt;&#10;&lt;/table&gt;" description="" toReformat="true" toShortenFQNames="true">
-    <context />
-  </template>
   <template name="tr+" value="&lt;tr&gt;&#10;&lt;td&gt;$END$&lt;/td&gt;&#10;&lt;/tr&gt;" description="" toReformat="true" toShortenFQNames="true">
     <context />
   </template>
