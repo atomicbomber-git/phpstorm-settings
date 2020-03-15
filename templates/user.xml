@@ -72,4 +72,12 @@
       <option name="VUE_COMPONENT_DESCRIPTOR" value="true" />
     </context>
   </template>
+  <template name="vaerror" value="{{ this.get(error_data, [`errors`, `$array_name$.${index}.$attribute_name$`, 0], '')}}" description="Get Array Error" toReformat="true" toShortenFQNames="true">
+    <variable name="array_name" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="attribute_name" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="true" />
+      <option name="VUE_TEMPLATE" value="true" />
+    </context>
+  </template>
 </templateSet>
