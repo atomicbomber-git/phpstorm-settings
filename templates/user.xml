@@ -65,4 +65,11 @@
       <option name="VUE_COMPONENT_DESCRIPTOR" value="true" />
     </context>
   </template>
+  <template name="ajaxconf" value="modal.confirmationModal()&#10;    .then(result =&gt; {&#10;        if (!result.value) throw new Error();&#10;        return axios.post(this.submit_url, this.form_data)&#10;    })&#10;    .then(() =&gt; {&#10;        window.location.replace(this.redirect_url)&#10;    })&#10;    .catch(error =&gt; {&#10;        let error_data = get(error, &quot;response.data&quot;, null);&#10;        if (error_data) this.error_data = error_data;&#10;    })" description="Ajax Confirmation Modal" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="ES6_STATEMENT" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+      <option name="VUE_COMPONENT_DESCRIPTOR" value="true" />
+    </context>
+  </template>
 </templateSet>
