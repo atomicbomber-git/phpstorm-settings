@@ -5,6 +5,9 @@
   <action id="CodeCleanup">
     <keyboard-shortcut first-keystroke="alt c" />
   </action>
+  <action id="Console.Jdbc.Execute">
+    <keyboard-shortcut first-keystroke="shift ctrl alt back_slash" />
+  </action>
   <action id="InsertLiveTemplate">
     <keyboard-shortcut first-keystroke="shift ctrl i" />
   </action>
