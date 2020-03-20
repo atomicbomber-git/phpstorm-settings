@@ -128,4 +128,13 @@
       <option name="VUE_TEMPLATE" value="true" />
     </context>
   </template>
+  <template name="vmbnumline" value="&lt;div class=&quot;form-group&quot;&gt;&#10;    &lt;label :for=&quot;`$field$_$${index}`&quot;&gt;&#10;        &lt;vue-cleave&#10;                id=&quot;`$field$_$${index}`&quot;&#10;                class=&quot;form-control form-control-sm t-a:r&quot;&#10;                :class=&quot;{'error': get(this.error_data, ['errors', `$array_name$.$${index}.$field$`, 0], false)}&quot;&#10;                v-model.number=&quot;value.$field$&quot;&#10;                placeholder=&quot;$label$&quot;&#10;                :options=&quot;{ numeral: true, numeralDecimalScale: 0 }&quot;&gt;&#10;        &lt;/vue-cleave&gt;&#10;    &lt;/label&gt;&#10;&#10;    &lt;label class=&quot;error&quot;&gt;&#10;        {{ get(this.error_data, ['errors', `$array_name$.$${index}.$field$`, 0], '') }}&#10;    &lt;/label&gt;&#10;&lt;/div&gt;" description="Vue MB Cleave Line Input" toReformat="true" toShortenFQNames="true">
+    <variable name="field" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="array_name" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="label" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="true" />
+      <option name="VUE_TEMPLATE" value="true" />
+    </context>
+  </template>
 </templateSet>
