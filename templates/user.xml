@@ -145,4 +145,11 @@
       <option name="PHP Statement" value="true" />
     </context>
   </template>
+  <template name="bforeach" value="@foreach($$$item$s AS $$$item$)&#10;@endforeach" description="Blade Laravel Foreach" toReformat="true" toShortenFQNames="true">
+    <variable name="item" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="true" />
+      <option name="VUE_TOP_LEVEL" value="true" />
+    </context>
+  </template>
 </templateSet>
