@@ -152,4 +152,9 @@
       <option name="VUE_TOP_LEVEL" value="true" />
     </context>
   </template>
+  <template name="fdatetime" value="(new Date($datetime))-&gt;format(&quot;l, d F Y H:i:s&quot;)" description="Jenssegers  / Carbon Date Format Datetime" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="PHP Expression" value="true" />
+    </context>
+  </template>
 </templateSet>
