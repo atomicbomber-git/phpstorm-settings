@@ -223,4 +223,11 @@
       <option name="PHP Statement" value="true" />
     </context>
   </template>
+  <template name="laraintrans" value="\Illuminate\Support\Facades\DB::beginTransaction();&#10;     $content$   &#10;\Illuminate\Support\Facades\DB::commit();" description="Laravel Inline DB Transaction" toReformat="true" toShortenFQNames="true">
+    <variable name="content" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP Expression" value="true" />
+      <option name="PHP Statement" value="true" />
+    </context>
+  </template>
 </templateSet>
