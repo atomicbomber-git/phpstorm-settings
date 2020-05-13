@@ -230,4 +230,9 @@
       <option name="PHP Statement" value="true" />
     </context>
   </template>
+  <template name="scimpfort" value="// Font Awesome 5&#10;@import '~@fortawesome/fontawesome-free/css/all.css';" description="SCSSS Import Fortawesome" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="CSS_RULESET_LIST" value="true" />
+    </context>
+  </template>
 </templateSet>
