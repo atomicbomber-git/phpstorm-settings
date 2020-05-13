@@ -235,4 +235,10 @@
       <option name="CSS_RULESET_LIST" value="true" />
     </context>
   </template>
+  <template name="bnavitem" value="&lt;a href=&quot;{{ route(&quot;customer.index&quot;) }}&quot;&#10;   class=&quot;nav-link {{ \Illuminate\Support\Facades\Route::is('customer.*') ? &quot;active&quot; : &quot;&quot; }}&quot;&gt;&#10;    Customers&#10;&lt;/a&gt;" description="Bootstrap 4 Nav Item" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="HTML_TEXT" value="true" />
+      <option name="VUE_TEMPLATE" value="true" />
+    </context>
+  </template>
 </templateSet>
