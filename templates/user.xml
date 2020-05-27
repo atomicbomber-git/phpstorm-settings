@@ -246,4 +246,9 @@
       <option name="PHP Class Member" value="true" />
     </context>
   </template>
+  <template name="loopiter" value="{{ $loop-&gt;iteration }}" description="Laravel Blade Loop Iteration Number" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="HTML_TEXT" value="true" />
+    </context>
+  </template>
 </templateSet>
