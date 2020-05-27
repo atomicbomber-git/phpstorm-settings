@@ -251,4 +251,9 @@
       <option name="HTML_TEXT" value="true" />
     </context>
   </template>
+  <template name="jensfancydatetime" value="public static function fancyDatetime($datetime)&#10;{&#10;    return (new \Jenssegers\Date\Date($datetime))-&gt;format(&quot;l, d F Y H:i:s&quot;);&#10;}" description="Jenssegers Format Fancy Datetime" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="PHP Class Member" value="true" />
+    </context>
+  </template>
 </templateSet>
