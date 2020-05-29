@@ -329,4 +329,10 @@
       <option name="PHP Statement" value="true" />
     </context>
   </template>
+  <template name="dumperror" value="&lt;pre style=&quot;font-size: 12pt&quot;&gt;&#10;    {{ json_encode($errors-&gt;all(), JSON_PRETTY_PRINT) }}        &#10;&lt;/pre&gt;" description="Dump All Errors on View Laravel" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="HTML_TEXT" value="true" />
+      <option name="VUE_TOP_LEVEL" value="true" />
+    </context>
+  </template>
 </templateSet>
