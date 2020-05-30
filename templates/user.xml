@@ -323,7 +323,7 @@
       <option name="CSS_RULESET_LIST" value="true" />
     </context>
   </template>
-  <template name="retbackdel" value="return redirect()-&gt;back()&#10;    -&gt;with(&quot;messages&quot;, [&#10;        [&#10;            &quot;content&quot; =&gt; __(&quot;messages.delete.success&quot;),&#10;            &quot;state&quot; =&gt; MessageState::STATE_SUCCESS&#10;        ]&#10;    ]);" toReformat="true" toShortenFQNames="true">
+  <template name="retbackdel" value="return redirect()-&gt;back()&#10;    -&gt;with(&quot;messages&quot;, [&#10;        [&#10;            &quot;content&quot; =&gt; __(&quot;messages.delete.success&quot;),&#10;            &quot;state&quot; =&gt; MessageState::STATE_SUCCESS&#10;        ]&#10;    ]);" description="" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="PHP Expression" value="true" />
       <option name="PHP Statement" value="true" />
