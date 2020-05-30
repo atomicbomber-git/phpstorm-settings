@@ -335,4 +335,9 @@
       <option name="VUE_TOP_LEVEL" value="true" />
     </context>
   </template>
+  <template name="lcvalid" value="function ($$attribute, $$value, $$fail) {&#10;    if ($$value === 'foo') {&#10;        $$fail($$attribute.' is invalid.');&#10;    }&#10;}," description="Laravel Closure Validation" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="PHP Expression" value="true" />
+    </context>
+  </template>
 </templateSet>
