@@ -349,4 +349,9 @@
       <option name="VUE_TEMPLATE" value="true" />
     </context>
   </template>
+  <template name="imselect2" value="// Select2&#10;@import &quot;~select2/dist/css/select2.min.css&quot;;" description="Import Select2 SCSS" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="CSS_RULESET_LIST" value="true" />
+    </context>
+  </template>
 </templateSet>
