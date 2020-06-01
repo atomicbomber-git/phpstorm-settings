@@ -340,7 +340,7 @@
       <option name="PHP Expression" value="true" />
     </context>
   </template>
-  <template name="bformedit" value="&lt;form &#10;    method=&quot;POST&quot;&#10;    action=&quot;{{ route(&quot;$route_name$&quot;, $$$variable$)  }}&quot;&gt;&#10;    @method(&quot;PATCH&quot;)&#10;    @csrf&#10;    &#10;    $content$&#10;    &#10;    &lt;div class=&quot;d-flex justify-content-end&quot;&gt;&#10;        &lt;button class=&quot;btn btn-primary&quot; type=&quot;submit&quot;&gt;&#10;            Update&#10;        &lt;/button&gt;&#10;    &lt;/div&gt;&#10;&lt;/form&gt;" toReformat="true" toShortenFQNames="true">
+  <template name="bformedit" value="&lt;form &#10;    method=&quot;POST&quot;&#10;    action=&quot;{{ route(&quot;$route_name$&quot;, $$$variable$)  }}&quot;&gt;&#10;    @method(&quot;PATCH&quot;)&#10;    @csrf&#10;    &#10;    $content$&#10;    &#10;    &lt;div class=&quot;d-flex justify-content-end&quot;&gt;&#10;        &lt;button class=&quot;btn btn-primary&quot; type=&quot;submit&quot;&gt;&#10;            Update&#10;        &lt;/button&gt;&#10;    &lt;/div&gt;&#10;&lt;/form&gt;" description="" toReformat="true" toShortenFQNames="true">
     <variable name="route_name" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="variable" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="content" expression="" defaultValue="" alwaysStopAt="true" />
