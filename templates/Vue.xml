@@ -1,4 +1,11 @@
 <templateSet group="Vue">
+  <template name="vclass-obj-mult" value="&lt;$div$ :class=&quot;[$classNameA$, {$classNameB$ : $condition$}]&quot;&gt;&lt;/$div$&gt;" description="Vue multiple conditional class bindings" toReformat="true" toShortenFQNames="true">
+    <variable name="div" expression="" defaultValue="&quot;div&quot;" alwaysStopAt="true" />
+    <variable name="classNameA" expression="" defaultValue="&quot;classNameA&quot;" alwaysStopAt="true" />
+    <variable name="classNameB" expression="" defaultValue="&quot;classNameB&quot;" alwaysStopAt="true" />
+    <variable name="condition" expression="" defaultValue="&quot;condition&quot;" alwaysStopAt="true" />
+    <context />
+  </template>
   <template name="vstore-import" value="import { store } from './store/store';&#10;" description="Import Vuex store into main.js" toReformat="true" toShortenFQNames="true">
     <context />
   </template>
@@ -117,13 +124,6 @@
   <template name="vsrc" value="&lt;img :src=&quot;'/path/to/images/' + $fileName$&quot; alt=&quot;$altText$&quot;/&gt;" description="Vue image source binding" toReformat="true" toShortenFQNames="true">
     <variable name="fileName" expression="" defaultValue="&quot;fileName&quot;" alwaysStopAt="true" />
     <variable name="altText" expression="" defaultValue="&quot;altText&quot;" alwaysStopAt="true" />
-    <context />
-  </template>
-  <template name="vclass-obj-mult" value="&lt;$div$ :class=&quot;[$classNameA$, {$classNameB$ : $condition$}]&quot;&gt;&lt;/$div$&gt;" description="Vue multiple conditional class bindings" toReformat="true" toShortenFQNames="true">
-    <variable name="div" expression="" defaultValue="&quot;div&quot;" alwaysStopAt="true" />
-    <variable name="classNameA" expression="" defaultValue="&quot;classNameA&quot;" alwaysStopAt="true" />
-    <variable name="classNameB" expression="" defaultValue="&quot;classNameB&quot;" alwaysStopAt="true" />
-    <variable name="condition" expression="" defaultValue="&quot;condition&quot;" alwaysStopAt="true" />
     <context />
   </template>
   <template name="vstyle" value="&lt;$div$ :style=&quot;{ fontSize: $data$ + 'px' }&quot;&gt;&lt;/$div$&gt;" description="Vue inline style binding" toReformat="true" toShortenFQNames="true">

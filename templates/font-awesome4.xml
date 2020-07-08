@@ -1,11 +1,4 @@
 <templateSet group="font-awesome4">
-  <template name="fa4-exclamation-triangle" value="&lt;i class=&quot;fa fa-exclamation-triangle$1$&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;$END$" description="Exclamation Triangle" toReformat="true" toShortenFQNames="false">
-    <variable name="1" expression="" defaultValue="" alwaysStopAt="true" />
-    <context>
-      <option name="GSP" value="true" />
-      <option name="JSP" value="true" />
-    </context>
-  </template>
   <template name="fa4-$" value="&lt;link rel=&quot;stylesheet&quot; href=&quot;$1$&quot;&gt;$END$" description="Font awesome 4 css link" toReformat="true" toShortenFQNames="false">
     <variable name="1" expression="&quot;https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css&quot;" defaultValue="" alwaysStopAt="true" />
     <context>
@@ -1470,6 +1463,13 @@
     </context>
   </template>
   <template name="fa4-exclamation-circle" value="&lt;i class=&quot;fa fa-exclamation-circle$1$&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;$END$" description="Exclamation Circle" toReformat="true" toShortenFQNames="false">
+    <variable name="1" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="GSP" value="true" />
+      <option name="JSP" value="true" />
+    </context>
+  </template>
+  <template name="fa4-exclamation-triangle" value="&lt;i class=&quot;fa fa-exclamation-triangle$1$&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;$END$" description="Exclamation Triangle" toReformat="true" toShortenFQNames="false">
     <variable name="1" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="GSP" value="true" />
