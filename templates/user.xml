@@ -369,4 +369,12 @@
       <option name="PHP Statement" value="true" />
     </context>
   </template>
+  <template name="lmbinput" value="&lt;div class=&quot;form-group&quot;&gt;&#10;    &lt;label for=&quot;$username$&quot;&gt; $Label$: &lt;/label&gt;&#10;    &lt;input name=&quot;$username$&quot;&#10;           id=&quot;$username$&quot;&#10;           type=&quot;text&quot;&#10;           class=&quot;form-control @error(&quot;$username$&quot;) error @enderror&quot;&#10;           placeholder=&quot;$Label$&quot;&#10;           value=&quot;{{ old(&quot;$username$&quot;) }}&quot;&gt;&#10;    @error(&quot;$username$&quot;)&#10;    &lt;label class=&quot;error&quot;&gt;&#10;        {{ $$message }}&#10;    &lt;/label&gt;&#10;    @enderror&#10;&lt;/div&gt;" description="Laravel Milestone Bootstrap Input" toReformat="true" toShortenFQNames="true">
+    <variable name="username" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="Label" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="true" />
+      <option name="VUE_TEMPLATE" value="true" />
+    </context>
+  </template>
 </templateSet>
