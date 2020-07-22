@@ -377,4 +377,11 @@
       <option name="VUE_TEMPLATE" value="true" />
     </context>
   </template>
+  <template name="fcomment" value="/*&#10;|--------------------------------------------------------------------------&#10;| $title$&#10;|--------------------------------------------------------------------------&#10;|&#10;| $content$&#10;|&#10;*/" description="Fancy Laravel-Style Comment" toReformat="true" toShortenFQNames="true">
+    <variable name="title" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="content" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP Expression" value="true" />
+    </context>
+  </template>
 </templateSet>
