@@ -384,4 +384,11 @@
       <option name="PHP Expression" value="true" />
     </context>
   </template>
+  <template name="bbe" value="@extends(&quot;layouts.app&quot;)&#10;&#10;@section(&quot;content&quot;)&#10;    $CONTENT$&#10;@endsection" description="Blade Boilerplate Extend" toReformat="true" toShortenFQNames="true">
+    <variable name="CONTENT" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="true" />
+      <option name="VUE_TOP_LEVEL" value="true" />
+    </context>
+  </template>
 </templateSet>
