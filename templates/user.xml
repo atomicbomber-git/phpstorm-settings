@@ -391,7 +391,7 @@
       <option name="VUE_TOP_LEVEL" value="true" />
     </context>
   </template>
-  <template name="bform" value="&lt;form action=&quot;{{ route(&quot;$route$&quot;) }}&quot; method=&quot;POST&quot;&gt;&#10;    @csrf&#10;    @method(&quot;$POST$&quot;)&#10;    $content$&#10;&lt;/form&gt;" toReformat="true" toShortenFQNames="true">
+  <template name="bform" value="&lt;form action=&quot;{{ route(&quot;$route$&quot;) }}&quot; method=&quot;POST&quot;&gt;&#10;    @csrf&#10;    @method(&quot;$POST$&quot;)&#10;    $content$&#10;&lt;/form&gt;" description="" toReformat="true" toShortenFQNames="true">
     <variable name="route" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="POST" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="content" expression="" defaultValue="" alwaysStopAt="true" />
