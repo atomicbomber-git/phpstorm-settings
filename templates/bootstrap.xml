@@ -1,10 +1,10 @@
 <templateSet group="bootstrap">
-  <template name="b4-progress-colored" value="&lt;div class=&quot;progress&quot;&gt;&#10;    &lt;div class=&quot;progress-bar bg-$5$&quot; role=&quot;progressbar&quot; style=&quot;width: $4$%;&quot;&#10;        aria-valuenow=&quot;$4$&quot; aria-valuemin=&quot;$2$&quot; aria-valuemax=&quot;$3$&quot;&gt;$1$&lt;/div&gt;&#10;&lt;/div&gt;$END$" description="progress colored" toReformat="true" toShortenFQNames="false">
-    <variable name="1" expression="&quot;Description&quot;" defaultValue="" alwaysStopAt="true" />
-    <variable name="2" expression="&quot;0&quot;" defaultValue="" alwaysStopAt="true" />
-    <variable name="3" expression="&quot;100&quot;" defaultValue="" alwaysStopAt="true" />
-    <variable name="4" expression="&quot;25&quot;" defaultValue="" alwaysStopAt="true" />
-    <variable name="5" expression="enum(&quot;primary&quot;,&quot;secondary&quot;,&quot;success&quot;,&quot;danger&quot;,&quot;warning&quot;,&quot;info&quot;,&quot;light&quot;,&quot;dark&quot;)" defaultValue="" alwaysStopAt="true" />
+  <template name="b4-breadcrumb-default" value="&lt;nav class=&quot;breadcrumb&quot;&gt;&#10;&#9;&lt;a class=&quot;breadcrumb-item&quot; href=&quot;$2$&quot;&gt;$1$&lt;/a&gt;&#10;&#9;&lt;a class=&quot;breadcrumb-item&quot; href=&quot;$4$&quot;&gt;$3$&lt;/a&gt;&#10;&#9;&lt;span class=&quot;breadcrumb-item active&quot;&gt;$5$&lt;/span&gt;&#10;&lt;/nav&gt;$END$" description="breadcrumb default" toReformat="true" toShortenFQNames="false">
+    <variable name="1" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="2" expression="&quot;#&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="3" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="4" expression="&quot;#&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="5" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="GSP" value="true" />
       <option name="JSP" value="true" />
@@ -174,17 +174,6 @@
     <variable name="7" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="8" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="9" expression="" defaultValue="" alwaysStopAt="true" />
-    <context>
-      <option name="GSP" value="true" />
-      <option name="JSP" value="true" />
-    </context>
-  </template>
-  <template name="b4-breadcrumb-default" value="&lt;nav class=&quot;breadcrumb&quot;&gt;&#10;&#9;&lt;a class=&quot;breadcrumb-item&quot; href=&quot;$2$&quot;&gt;$1$&lt;/a&gt;&#10;&#9;&lt;a class=&quot;breadcrumb-item&quot; href=&quot;$4$&quot;&gt;$3$&lt;/a&gt;&#10;&#9;&lt;span class=&quot;breadcrumb-item active&quot;&gt;$5$&lt;/span&gt;&#10;&lt;/nav&gt;$END$" description="breadcrumb default" toReformat="true" toShortenFQNames="false">
-    <variable name="1" expression="" defaultValue="" alwaysStopAt="true" />
-    <variable name="2" expression="&quot;#&quot;" defaultValue="" alwaysStopAt="true" />
-    <variable name="3" expression="" defaultValue="" alwaysStopAt="true" />
-    <variable name="4" expression="&quot;#&quot;" defaultValue="" alwaysStopAt="true" />
-    <variable name="5" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="GSP" value="true" />
       <option name="JSP" value="true" />
@@ -1612,6 +1601,17 @@
     <variable name="1" expression="&quot;Trigger&quot;" defaultValue="" alwaysStopAt="true" />
     <variable name="2" expression="&quot;Popup title&quot;" defaultValue="" alwaysStopAt="true" />
     <variable name="3" expression="&quot;Popup content&quot;" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="GSP" value="true" />
+      <option name="JSP" value="true" />
+    </context>
+  </template>
+  <template name="b4-progress-colored" value="&lt;div class=&quot;progress&quot;&gt;&#10;    &lt;div class=&quot;progress-bar bg-$5$&quot; role=&quot;progressbar&quot; style=&quot;width: $4$%;&quot;&#10;        aria-valuenow=&quot;$4$&quot; aria-valuemin=&quot;$2$&quot; aria-valuemax=&quot;$3$&quot;&gt;$1$&lt;/div&gt;&#10;&lt;/div&gt;$END$" description="progress colored" toReformat="true" toShortenFQNames="false">
+    <variable name="1" expression="&quot;Description&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="2" expression="&quot;0&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="3" expression="&quot;100&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="4" expression="&quot;25&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="5" expression="enum(&quot;primary&quot;,&quot;secondary&quot;,&quot;success&quot;,&quot;danger&quot;,&quot;warning&quot;,&quot;info&quot;,&quot;light&quot;,&quot;dark&quot;)" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="GSP" value="true" />
       <option name="JSP" value="true" />
