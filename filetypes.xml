@@ -3,6 +3,7 @@
     <extensionMap>
       <mapping ext="ods" type="Native" />
       <mapping pattern="inline-textarea" type="PLAIN_TEXT" />
+      <mapping pattern="TODO" type="PLAIN_TEXT" />
       <mapping pattern=".env.acceptance" type="PLAIN_TEXT" />
       <mapping ext="postcss" type="PLAIN_TEXT" />
     </extensionMap>
