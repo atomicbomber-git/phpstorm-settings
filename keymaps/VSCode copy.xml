@@ -8,6 +8,9 @@
   <action id="Console.Jdbc.Execute">
     <keyboard-shortcut first-keystroke="shift ctrl alt back_slash" />
   </action>
+  <action id="HideAllWindows">
+    <keyboard-shortcut first-keystroke="ctrl alt back_space" />
+  </action>
   <action id="InsertLiveTemplate">
     <keyboard-shortcut first-keystroke="shift ctrl i" />
   </action>
