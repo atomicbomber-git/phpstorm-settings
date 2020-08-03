@@ -1,11 +1,1 @@
-<code_scheme name="Default" version="173">
-  <HTMLCodeStyleSettings>
-    <option name="HTML_ATTRIBUTE_WRAP" value="2" />
-    <option name="HTML_INLINE_ELEMENTS" value="" />
-    <option name="HTML_DONT_ADD_BREAKS_IF_INLINE_CONTENT" value="" />
-  </HTMLCodeStyleSettings>
-  <PHPCodeStyleSettings>
-    <option name="COMMA_AFTER_LAST_ARRAY_ELEMENT" value="true" />
-    <option name="FORCE_SHORT_DECLARATION_ARRAY_STYLE" value="true" />
-  </PHPCodeStyleSettings>
-</code_scheme>
+<code_scheme name="Default" version="173" />
