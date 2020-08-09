@@ -419,4 +419,9 @@
       <option name="PHP Class Member" value="true" />
     </context>
   </template>
+  <template name="cinject" value="private ResponseFactory $responseFactory;&#10;    private Gate $gate;&#10;&#10;    /**&#10;     * FotoTempatPenyewaanController constructor.&#10;     * @param ResponseFactory $responseFactory&#10;     * @param Gate $gate&#10;     */&#10;    public function __construct(ResponseFactory $responseFactory, Gate $gate)&#10;    {&#10;        $this-&gt;responseFactory = $responseFactory;&#10;        $this-&gt;gate = $gate;&#10;    }" description="Laravel Controller Injection" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="PHP Class Member" value="true" />
+    </context>
+  </template>
 </templateSet>
