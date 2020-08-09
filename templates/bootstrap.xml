@@ -1,10 +1,9 @@
 <templateSet group="bootstrap">
-  <template name="b4-breadcrumb-default" value="&lt;nav class=&quot;breadcrumb&quot;&gt;&#10;&#9;&lt;a class=&quot;breadcrumb-item&quot; href=&quot;$2$&quot;&gt;$1$&lt;/a&gt;&#10;&#9;&lt;a class=&quot;breadcrumb-item&quot; href=&quot;$4$&quot;&gt;$3$&lt;/a&gt;&#10;&#9;&lt;span class=&quot;breadcrumb-item active&quot;&gt;$5$&lt;/span&gt;&#10;&lt;/nav&gt;$END$" description="breadcrumb default" toReformat="true" toShortenFQNames="false">
+  <template name="b4-image-default" value="&lt;img src=&quot;$1$&quot; class=&quot;img-$2$ $3$&quot; alt=&quot;$4$&quot;&gt;$END$" description="image default" toReformat="true" toShortenFQNames="false">
     <variable name="1" expression="" defaultValue="" alwaysStopAt="true" />
-    <variable name="2" expression="&quot;#&quot;" defaultValue="" alwaysStopAt="true" />
-    <variable name="3" expression="" defaultValue="" alwaysStopAt="true" />
-    <variable name="4" expression="&quot;#&quot;" defaultValue="" alwaysStopAt="true" />
-    <variable name="5" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="2" expression="enum(&quot;fluid&quot;,&quot;thumbnail&quot;)" defaultValue="" alwaysStopAt="true" />
+    <variable name="3" expression="enum(&quot;rounded-top&quot;,&quot;rounded-right&quot;,&quot;rounded-bottom&quot;,&quot;rounded-left&quot;,&quot;rounded-circle&quot;)" defaultValue="" alwaysStopAt="true" />
+    <variable name="4" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="GSP" value="true" />
       <option name="JSP" value="true" />
@@ -174,6 +173,17 @@
     <variable name="7" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="8" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="9" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="GSP" value="true" />
+      <option name="JSP" value="true" />
+    </context>
+  </template>
+  <template name="b4-breadcrumb-default" value="&lt;nav class=&quot;breadcrumb&quot;&gt;&#10;&#9;&lt;a class=&quot;breadcrumb-item&quot; href=&quot;$2$&quot;&gt;$1$&lt;/a&gt;&#10;&#9;&lt;a class=&quot;breadcrumb-item&quot; href=&quot;$4$&quot;&gt;$3$&lt;/a&gt;&#10;&#9;&lt;span class=&quot;breadcrumb-item active&quot;&gt;$5$&lt;/span&gt;&#10;&lt;/nav&gt;$END$" description="breadcrumb default" toReformat="true" toShortenFQNames="false">
+    <variable name="1" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="2" expression="&quot;#&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="3" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="4" expression="&quot;#&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="5" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="GSP" value="true" />
       <option name="JSP" value="true" />
@@ -1675,16 +1685,6 @@
     <variable name="2" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="3" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="4" expression="&quot;text-xs-right&quot;" defaultValue="" alwaysStopAt="true" />
-    <context>
-      <option name="GSP" value="true" />
-      <option name="JSP" value="true" />
-    </context>
-  </template>
-  <template name="b4-image-default" value="&lt;img src=&quot;$1$&quot; class=&quot;img-$2$ $3$&quot; alt=&quot;$4$&quot;&gt;$END$" description="image default" toReformat="true" toShortenFQNames="false">
-    <variable name="1" expression="" defaultValue="" alwaysStopAt="true" />
-    <variable name="2" expression="enum(&quot;fluid&quot;,&quot;thumbnail&quot;)" defaultValue="" alwaysStopAt="true" />
-    <variable name="3" expression="enum(&quot;rounded-top&quot;,&quot;rounded-right&quot;,&quot;rounded-bottom&quot;,&quot;rounded-left&quot;,&quot;rounded-circle&quot;)" defaultValue="" alwaysStopAt="true" />
-    <variable name="4" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="GSP" value="true" />
       <option name="JSP" value="true" />
