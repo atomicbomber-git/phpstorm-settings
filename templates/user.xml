@@ -424,4 +424,11 @@
       <option name="PHP Class Member" value="true" />
     </context>
   </template>
+  <template name="gauth" value="$this-&gt;gate-&gt;authorize(AuthServiceProvider::$ACTION$);&#10;$END$" description="Laravel Gate Authorize" toReformat="true" toShortenFQNames="true">
+    <variable name="ACTION" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP Expression" value="true" />
+      <option name="PHP Statement" value="true" />
+    </context>
+  </template>
 </templateSet>
