@@ -15,4 +15,13 @@
       <option name="VUE_TEMPLATE" value="true" />
     </context>
   </template>
+  <template name="bulfile" value="&lt;div class=&quot;field&quot;&gt;&#10;    &lt;label class=&quot;label&quot;&#10;           for=&quot;$FIELD$&quot;&#10;    &gt; Gambar &lt;/label&gt;&#10;&#10;    &lt;div class=&quot;file&quot;&gt;&#10;        &lt;label class=&quot;file-label&quot;&gt;&#10;            &lt;input class=&quot;file-input&quot; accept=&quot;$ACCEPT$&quot; type=&quot;file&quot; name=&quot;$FIELD$&quot;&gt;&#10;            &lt;span class=&quot;file-cta&quot;&gt;&#10;              &lt;span class=&quot;file-icon&quot;&gt;&#10;                &lt;i class=&quot;fas fa-upload&quot;&gt;&lt;/i&gt;&#10;              &lt;/span&gt;&#10;              &lt;span class=&quot;file-label&quot;&gt;&#10;                $INFO_TEXT$&#10;              &lt;/span&gt;&#10;            &lt;/span&gt;&#10;        &lt;/label&gt;&#10;    &lt;/div&gt;&#10;&#10;    @error('$FIELD$')&#10;    &lt;p class=&quot;help is-danger&quot;&gt; {{ $message }} &lt;/p&gt;&#10;    @enderror&#10;&lt;/div&gt;" description="Bulma File Input" toReformat="true" toShortenFQNames="true">
+    <variable name="FIELD" expression="" defaultValue="image" alwaysStopAt="true" />
+    <variable name="ACCEPT" expression="" defaultValue="image/png,image/jpeg,image/jpg" alwaysStopAt="true" />
+    <variable name="INFO_TEXT" expression="" defaultValue="Pilih berkas gambar..." alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="true" />
+      <option name="VUE_TEMPLATE" value="true" />
+    </context>
+  </template>
 </templateSet>
