@@ -24,4 +24,11 @@
       <option name="VUE_TEMPLATE" value="true" />
     </context>
   </template>
+  <template name="bulbut" value="&lt;a href=&quot;#&quot; class=&quot;button is-primary is-small&quot;&gt;&#10;    &lt;span class=&quot;icon is-small&quot;&gt;&#10;        &lt;i class=&quot;fas fa-pencil-alt&quot;&gt;&lt;/i&gt;&#10;    &lt;/span&gt;&#10;    &lt;span&gt;&#10;        $CAPTION$&#10;    &lt;/span&gt;&#10;&lt;/a&gt;" description="Bulma Button" toReformat="true" toShortenFQNames="true">
+    <variable name="CAPTION" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="true" />
+      <option name="VUE_TEMPLATE" value="true" />
+    </context>
+  </template>
 </templateSet>
