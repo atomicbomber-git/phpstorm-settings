@@ -64,4 +64,17 @@
       <option name="VUE_TOP_LEVEL" value="true" />
     </context>
   </template>
+  <template name="loopiter" value="{{ $loop-&gt;iteration }}" description="Blade Loop Iteration" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="HTML_TEXT" value="true" />
+      <option name="VUE_TEMPLATE" value="true" />
+    </context>
+  </template>
+  <template name="bforeach" value="@foreach ($$$ITEM$s as $$$ITEM$)&#10;                                &#10;@endforeach" toReformat="true" toShortenFQNames="true">
+    <variable name="ITEM" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="true" />
+      <option name="VUE_TEMPLATE" value="true" />
+    </context>
+  </template>
 </templateSet>
