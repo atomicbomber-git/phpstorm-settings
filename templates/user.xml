@@ -98,4 +98,16 @@
       <option name="VUE_TEMPLATE" value="true" />
     </context>
   </template>
+  <template name="delsuc" value="SessionHelper::flashMessage(&#10;    __(&quot;messages.delete.success&quot;),&#10;    MessageState::STATE_SUCCESS,&#10;);" description="Laravel Flash Delete Success Message" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="PHP Expression" value="true" />
+      <option name="PHP Statement" value="true" />
+    </context>
+  </template>
+  <template name="delfail" value="SessionHelper::flashMessage(&#10;    __(&quot;messages.delete.failure&quot;),&#10;    MessageState::STATE_DANGER,&#10;);" description="Laravel Flash Delete Failure Message" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="PHP Expression" value="true" />
+      <option name="PHP Statement" value="true" />
+    </context>
+  </template>
 </templateSet>
