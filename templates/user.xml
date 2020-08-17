@@ -116,4 +116,17 @@
       <option name="PHP Statement" value="true" />
     </context>
   </template>
+  <template name="hasman" value="public function $METHOD_NAME$(): HasMany&#10;{&#10;    return $this-&gt;hasMany($CLASS_NAME$::class);&#10;}" toReformat="true" toShortenFQNames="true">
+    <variable name="CLASS_NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="METHOD_NAME" expression="camelCase(CLASS_NAME)" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP Class Member" value="true" />
+    </context>
+  </template>
+  <template name="lartrans" value="\Illuminate\Support\Facades\DB::beginTransaction();&#10;&#10;$SELECTION$&#10;&#10;\Illuminate\Support\Facades\DB::commit();&#10;&#10;$END$" description="Laravel Database Transaction" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="PHP Expression" value="true" />
+      <option name="PHP Statement" value="true" />
+    </context>
+  </template>
 </templateSet>
