@@ -1,15 +1,4 @@
 <templateSet group="bootstrap">
-  <template name="b4-breadcrumb-default" value="&lt;nav class=&quot;breadcrumb&quot;&gt;&#10;&#9;&lt;a class=&quot;breadcrumb-item&quot; href=&quot;$2$&quot;&gt;$1$&lt;/a&gt;&#10;&#9;&lt;a class=&quot;breadcrumb-item&quot; href=&quot;$4$&quot;&gt;$3$&lt;/a&gt;&#10;&#9;&lt;span class=&quot;breadcrumb-item active&quot;&gt;$5$&lt;/span&gt;&#10;&lt;/nav&gt;$END$" description="breadcrumb default" toReformat="true" toShortenFQNames="false">
-    <variable name="1" expression="" defaultValue="" alwaysStopAt="true" />
-    <variable name="2" expression="&quot;#&quot;" defaultValue="" alwaysStopAt="true" />
-    <variable name="3" expression="" defaultValue="" alwaysStopAt="true" />
-    <variable name="4" expression="&quot;#&quot;" defaultValue="" alwaysStopAt="true" />
-    <variable name="5" expression="" defaultValue="" alwaysStopAt="true" />
-    <context>
-      <option name="GSP" value="true" />
-      <option name="JSP" value="true" />
-    </context>
-  </template>
   <template name="b4-$" value="&lt;!doctype html&gt;&#10;&lt;html lang=&quot;en&quot;&gt;&#10;  &lt;head&gt;&#10;    &lt;title&gt;$1$&lt;/title&gt;&#10;    &lt;!-- Required meta tags --&gt;&#10;    &lt;meta charset=&quot;utf-8&quot;&gt;&#10;    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, shrink-to-fit=no&quot;&gt;&#10;&#10;    &lt;!-- Bootstrap CSS --&gt;&#10;    &lt;link rel=&quot;stylesheet&quot; href=&quot;$2$&quot; integrity=&quot;$3$&quot; crossorigin=&quot;anonymous&quot;&gt;&#10;  &lt;/head&gt;&#10;  &lt;body&gt;&#10;      $10$$END$&#10;    &lt;!-- Optional JavaScript --&gt;&#10;    &lt;!-- jQuery first, then Popper.js, then Bootstrap JS --&gt;&#10;    &lt;script src=&quot;$4$&quot; integrity=&quot;$5$&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;&#10;    &lt;script src=&quot;$6$&quot; integrity=&quot;$7$&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;&#10;    &lt;script src=&quot;$8$&quot; integrity=&quot;$9$&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;&#10;  &lt;/body&gt;&#10;&lt;/html&gt;" description="Bootstrap master template" toReformat="true" toShortenFQNames="false">
     <variable name="1" expression="&quot;Title&quot;" defaultValue="" alwaysStopAt="true" />
     <variable name="2" expression="&quot;https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css&quot;" defaultValue="" alwaysStopAt="true" />
@@ -174,6 +163,17 @@
     <variable name="7" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="8" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="9" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="GSP" value="true" />
+      <option name="JSP" value="true" />
+    </context>
+  </template>
+  <template name="b4-breadcrumb-default" value="&lt;nav class=&quot;breadcrumb&quot;&gt;&#10;&#9;&lt;a class=&quot;breadcrumb-item&quot; href=&quot;$2$&quot;&gt;$1$&lt;/a&gt;&#10;&#9;&lt;a class=&quot;breadcrumb-item&quot; href=&quot;$4$&quot;&gt;$3$&lt;/a&gt;&#10;&#9;&lt;span class=&quot;breadcrumb-item active&quot;&gt;$5$&lt;/span&gt;&#10;&lt;/nav&gt;$END$" description="breadcrumb default" toReformat="true" toShortenFQNames="false">
+    <variable name="1" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="2" expression="&quot;#&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="3" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="4" expression="&quot;#&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="5" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="GSP" value="true" />
       <option name="JSP" value="true" />

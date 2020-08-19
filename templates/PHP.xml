@@ -1,9 +1,7 @@
 <templateSet group="PHP">
-  <template name="dd400" value="http_response_code(400);&#10;dd($$$var$);" description="" toReformat="true" toShortenFQNames="true">
-    <variable name="var" expression="" defaultValue="" alwaysStopAt="true" />
-    <context>
-      <option name="PHP Expression" value="true" />
-      <option name="PHP Statement" value="true" />
-    </context>
+  <template name="pubf" value="public function $NAME$($PARAMETERS$){&#10;    $END$&#10;}" description="public function" toReformat="true" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="PARAMETERS" expression="phpVar" defaultValue="" alwaysStopAt="true" />
+    <context />
   </template>
 </templateSet>
