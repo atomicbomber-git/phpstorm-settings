@@ -157,4 +157,23 @@
       <option name="PHP Statement" value="true" />
     </context>
   </template>
+  <template name="bbase" value="@extends(&quot;layouts.app&quot;)&#10;&#10;@section(&quot;content&quot;)&#10;    $END$&#10;@endsection" description="Laravel Layout Base" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="HTML_TEXT" value="true" />
+      <option name="VUE_TOP_LEVEL" value="true" />
+    </context>
+  </template>
+  <template name="reqval" value="$data = $request-&gt;validate([&#10;    $END$&#10;]);" description="Laravel Request Validate" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="PHP Expression" value="true" />
+      <option name="PHP Statement" value="true" />
+    </context>
+  </template>
+  <template name="retred" value="return $this-&gt;responseFactory-&gt;redirectToRoute(&quot;$ROUTE$&quot;);" description="Laravel Controller Return RedirectToRoute" toReformat="true" toShortenFQNames="true">
+    <variable name="ROUTE" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP Expression" value="true" />
+      <option name="PHP Statement" value="true" />
+    </context>
+  </template>
 </templateSet>
