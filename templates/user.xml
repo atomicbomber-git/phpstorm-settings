@@ -176,4 +176,19 @@
       <option name="PHP Statement" value="true" />
     </context>
   </template>
+  <template name="forpem" value="&lt;div&gt;&#10;    @if($$$ITEM$s-&gt;isNotEmpty())&#10;        &lt;div class=&quot;table-responsive&quot;&gt;&#10;            &lt;table class=&quot;table table-sm table-striped table-hover&quot;&gt;&#10;                &lt;thead&gt;&#10;                &lt;tr&gt;&#10;                    &lt;th&gt; #&lt;/th&gt;&#10;                    $END$&#10;                &lt;/tr&gt;&#10;                &lt;/thead&gt;&#10;&#10;                &lt;tbody&gt;&#10;                @foreach ($$$ITEM$s as $$$ITEM$)&#10;                    &lt;tr&gt;&#10;                        &lt;td&gt; {{ $$$ITEM$s-&gt;firstItem() + $$loop-&gt;index }} &lt;/td&gt;&#10;                    &lt;/tr&gt;&#10;                @endforeach&#10;                &lt;/tbody&gt;&#10;            &lt;/table&gt;&#10;        &lt;/div&gt;&#10;&#10;        &lt;div class=&quot;d-flex justify-content-center&quot;&gt;&#10;            {{ $$$ITEM$s-&gt;links() }}&#10;        &lt;/div&gt;&#10;&#10;    @else&#10;        &lt;div class=&quot;alert alert-warning&quot;&gt;&#10;            &lt;i class=&quot;fas fa-exclamation-triangle&quot;&gt;&lt;/i&gt;&#10;            {{ __(&quot;messages.no_data&quot;) }}&#10;        &lt;/div&gt;&#10;    @endif&#10;&lt;/div&gt;" description="Blade ForEach Table With Empty Message And Pagination" toReformat="true" toShortenFQNames="true">
+    <variable name="ITEM" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="true" />
+      <option name="VUE_TOP_LEVEL" value="true" />
+    </context>
+  </template>
+  <template name="lapbut" value="&lt;button&#10;        x-data=&quot;{}&quot;&#10;        x-on:click=&quot;&#10;        window.confirmDialog()&#10;            .then(response =&gt; {&#10;                if (response.value) {&#10;                    window.livewire.emit('$ITEM$:$ACTION$', {{ $$$ITEM$-&gt;id }})&#10;                }&#10;            })&quot;&#10;        class=&quot;btn btn-outline-danger btn-sm&quot;&gt;&#10;    Hapus&#10;&lt;/button&gt;" description="Laravel Livewire Alpinejs Button" toReformat="true" toShortenFQNames="true">
+    <variable name="ITEM" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="ACTION" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="true" />
+      <option name="VUE_TEMPLATE" value="true" />
+    </context>
+  </template>
 </templateSet>
