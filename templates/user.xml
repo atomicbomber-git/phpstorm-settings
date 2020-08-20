@@ -206,4 +206,13 @@
       <option name="VUE_TEMPLATE" value="true" />
     </context>
   </template>
+  <template name="bsele2" value="&lt;div class=&quot;form-group&quot;&gt;&#10;    &lt;label for=&quot;$FIELD$&quot;&gt; $LABEL$: &lt;/label&gt;&#10;    &lt;select&#10;            id=&quot;$FIELD$&quot;&#10;            type=&quot;text&quot;&#10;            class=&quot;form-control @error(&quot;$FIELD$&quot;) is-invalid @enderror&quot;&#10;            name=&quot;$FIELD$&quot;&#10;    &gt;&#10;    &lt;/select&gt;&#10;    @error(&quot;$FIELD$&quot;)&#10;    &lt;span class=&quot;invalid-feedback&quot;&gt;&#10;        {{ $message }}&#10;    &lt;/span&gt;&#10;    @enderror&#10;&#10;    @push(&quot;scripts&quot;)&#10;        &lt;script type=&quot;application/javascript&quot;&gt;&#10;            $(&quot;#$FIELD$&quot;).select2({&#10;                ajax: {&#10;                    url: &quot;{{ route(&quot;$SEARCH_ROUTE$&quot;) }}&quot;,&#10;                },&#10;                theme: &quot;bootstrap4&quot;&#10;            })&#10;        &lt;/script&gt;&#10;    @endpush&#10;&lt;/div&gt;" description="Blade Bootstrap4 Select2" toReformat="true" toShortenFQNames="true">
+    <variable name="FIELD" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="LABEL" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="SEARCH_ROUTE" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="true" />
+      <option name="VUE_TEMPLATE" value="true" />
+    </context>
+  </template>
 </templateSet>
