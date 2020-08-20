@@ -43,8 +43,9 @@
       <option name="PHP Class Member" value="true" />
     </context>
   </template>
-  <template name="retview" value="return $this-&gt;responseFactory-&gt;view(&quot;$VIEW_PATH$&quot;, [&#10;    $END$        &#10;]);" description="Laravel Controller Return View" toReformat="true" toShortenFQNames="true">
-    <variable name="VIEW_PATH" expression="" defaultValue="" alwaysStopAt="true" />
+  <template name="retview" value="return $this-&gt;responseFactory-&gt;view(&quot;$RESOURCE$.$ACTION$&quot;, [&#10;    $END$        &#10;]);" description="Laravel Controller Return View" toReformat="true" toShortenFQNames="true">
+    <variable name="RESOURCE" expression="decapitalize(regularExpression(phpClassName(), &quot;^(.*)Controller&quot;,  &quot;$1&quot;))" defaultValue="" alwaysStopAt="true" />
+    <variable name="ACTION" expression="groovyScript(&quot;import com.intellij.openapi.editor.Editor;import com.intellij.openapi.fileEditor.FileEditorManager;import com.intellij.openapi.project.ProjectManager;import com.intellij.psi.util.PsiTreeUtil;import com.intellij.psi.PsiDocumentManager;import com.intellij.psi.PsiElement;import com.intellij.psi.PsiNamedElement;import com.intellij.openapi.editor.impl.EditorImpl;import com.jetbrains.php.lang.psi.elements.impl.MethodImpl;def project = ProjectManager.getInstance().openProjects.first();def textEditor = _editor;def document = textEditor.document;def offset = textEditor.caretModel.offset;def psiFile = PsiDocumentManager.getInstance(project).getPsiFile(document);def psiElement = psiFile.findElementAt(offset);def method = PsiTreeUtil.getParentOfType(psiElement, MethodImpl.class);method.name; &quot;)" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="PHP Expression" value="true" />
       <option name="PHP Statement" value="true" />
