@@ -200,4 +200,10 @@
       <option name="PHP Statement" value="true" />
     </context>
   </template>
+  <template name="bscript" value="@push(&quot;scripts&quot;)&#10;    &lt;script type=&quot;application/javascript&quot;&gt;&#10;        &#10;    &lt;/script&gt;&#10;@endpush" description="Blade Push Script" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="HTML_TEXT" value="true" />
+      <option name="VUE_TEMPLATE" value="true" />
+    </context>
+  </template>
 </templateSet>
