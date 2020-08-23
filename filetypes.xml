@@ -6,6 +6,7 @@
       <mapping pattern="TODO" type="PLAIN_TEXT" />
       <mapping pattern="inline-textarea" type="PLAIN_TEXT" />
       <mapping ext="postcss" type="PLAIN_TEXT" />
+      <mapping ext="fish" type="PLAIN_TEXT" />
     </extensionMap>
   </component>
 </application>
