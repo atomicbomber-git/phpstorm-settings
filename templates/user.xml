@@ -240,4 +240,20 @@
       <option name="VUE_TEMPLATE" value="true" />
     </context>
   </template>
+  <template name="gindex" value="DB::unprepared(&quot;CREATE INDEX IF NOT EXISTS $NAME$_gin ON $TABLE$ USING gin($NAME$ gin_trgm_ops)&quot;);" description="Laravel Create GIN Index on Postgres" toReformat="true" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="&quot;column_name&quot;" alwaysStopAt="true" />
+    <variable name="TABLE" expression="" defaultValue="&quot;table_name&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="PHP Expression" value="true" />
+      <option name="PHP Statement" value="true" />
+    </context>
+  </template>
+  <template name="gistdex" value="DB::unprepared(&quot;CREATE INDEX IF NOT EXISTS $NAME$_gist ON $TABLE$ USING gist($NAME$ gist_trgm_ops)&quot;);" description="Laravel Create GiST Index on Postgres" toReformat="true" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="&quot;column_name&quot;" alwaysStopAt="true" />
+    <variable name="TABLE" expression="" defaultValue="&quot;table_name&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="PHP Expression" value="true" />
+      <option name="PHP Statement" value="true" />
+    </context>
+  </template>
 </templateSet>
