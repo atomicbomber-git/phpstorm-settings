@@ -43,8 +43,9 @@
       <option name="PHP Class Member" value="true" />
     </context>
   </template>
-  <template name="retview" value="return $this-&gt;responseFactory-&gt;view(&quot;$VIEW_PATH$&quot;, [&#10;    $END$        &#10;]);" description="Laravel Controller Return View" toReformat="true" toShortenFQNames="true">
-    <variable name="VIEW_PATH" expression="" defaultValue="" alwaysStopAt="true" />
+  <template name="retview" value="return $this-&gt;responseFactory-&gt;view(&quot;$RESOURCE$.$ACTION$&quot;, [&#10;    $END$        &#10;]);" description="Laravel Controller Return View" toReformat="true" toShortenFQNames="true">
+    <variable name="RESOURCE" expression="regularExpression(snakeCase(regularExpression(phpClassName(), &quot;^(.*)Controller&quot;,  &quot;$1&quot;)), &quot;_&quot;, &quot;-&quot;)" defaultValue="" alwaysStopAt="true" />
+    <variable name="ACTION" expression="groovyScript(&quot;import com.intellij.openapi.editor.Editor;import com.intellij.openapi.fileEditor.FileEditorManager;import com.intellij.openapi.project.ProjectManager;import com.intellij.psi.util.PsiTreeUtil;import com.intellij.psi.PsiDocumentManager;import com.intellij.psi.PsiElement;import com.intellij.psi.PsiNamedElement;import com.intellij.openapi.editor.impl.EditorImpl;import com.jetbrains.php.lang.psi.elements.impl.MethodImpl;def project = ProjectManager.getInstance().openProjects.first();def textEditor = _editor;def document = textEditor.document;def offset = textEditor.caretModel.offset;def psiFile = PsiDocumentManager.getInstance(project).getPsiFile(document);def psiElement = psiFile.findElementAt(offset);def method = PsiTreeUtil.getParentOfType(psiElement, MethodImpl.class);method.name; &quot;)" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="PHP Expression" value="true" />
       <option name="PHP Statement" value="true" />
@@ -91,7 +92,7 @@
       <option name="VUE_TEMPLATE" value="true" />
     </context>
   </template>
-  <template name="forem" value="@if($$$ITEM$s-&gt;isNotEmpty())&#10;    &lt;div class=&quot;table-responsive&quot;&gt;&#10;        &lt;table class=&quot;table table-sm table-striped table-hover&quot;&gt;&#10;            &lt;thead&gt;&#10;                &lt;tr&gt;&#10;                    &lt;th&gt; # &lt;/th&gt;&#10;                    $END$&#10;                &lt;/tr&gt;&#10;            &lt;/thead&gt;&#10;&#10;            &lt;tbody&gt;&#10;                @foreach ($$$ITEM$s as $$$ITEM$)&#10;&#10;                @endforeach&#10;            &lt;/tbody&gt;&#10;        &lt;/table&gt;&#10;    &lt;/div&gt;&#10;@else&#10;    &lt;div class=&quot;alert alert-warning&quot;&gt;&#10;        &lt;i class=&quot;fas fa-exclamation-triangle&quot;&gt;&lt;/i&gt;&#10;        {{ __(&quot;messages.no_data&quot;) }}&#10;    &lt;/div&gt;&#10;@endif" description="Blade ForEach Loop with Empty Guard" toReformat="true" toShortenFQNames="true">
+  <template name="forem" value="@if($$$ITEM$s-&gt;isNotEmpty())&#10;    &lt;div class=&quot;table-responsive&quot;&gt;&#10;        &lt;table class=&quot;table table-sm table-striped table-hover&quot;&gt;&#10;            &lt;thead&gt;&#10;                &lt;tr&gt;&#10;                    &lt;th&gt; # &lt;/th&gt;&#10;                    $END$&#10;                &lt;/tr&gt;&#10;            &lt;/thead&gt;&#10;&#10;            &lt;tbody&gt;&#10;                @foreach ($$$ITEM$s as $$$ITEM$)&#10;&#10;                @endforeach&#10;            &lt;/tbody&gt;&#10;        &lt;/table&gt;&#10;    &lt;/div&gt;&#10;@else&#10;    &lt;div class=&quot;alert alert-warning&quot;&gt;&#10;        &lt;i class=&quot;fas fa-exclamation-triangle&quot;&gt;&lt;/i&gt;&#10;        {{ __(&quot;messages.errors.no_data&quot;) }}&#10;    &lt;/div&gt;&#10;@endif" description="Blade ForEach Loop with Empty Guard" toReformat="true" toShortenFQNames="true">
     <variable name="ITEM" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="HTML_TEXT" value="true" />
@@ -116,9 +117,9 @@
       <option name="PHP Statement" value="true" />
     </context>
   </template>
-  <template name="hasman" value="public function $METHOD_NAME$(): HasMany&#10;{&#10;    return $this-&gt;hasMany($CLASS_NAME$::class);&#10;}" description="" toReformat="true" toShortenFQNames="true">
+  <template name="hasman" value="public function $METHOD_NAME$s(): HasMany&#10;{&#10;    return $this-&gt;hasMany($CLASS_NAME$::class);&#10;}" description="" toReformat="true" toShortenFQNames="true">
     <variable name="CLASS_NAME" expression="" defaultValue="" alwaysStopAt="true" />
-    <variable name="METHOD_NAME" expression="camelCase(CLASS_NAME)" defaultValue="" alwaysStopAt="true" />
+    <variable name="METHOD_NAME" expression="snakeCase(CLASS_NAME)" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="PHP Class Member" value="true" />
     </context>
@@ -155,6 +156,163 @@
     <context>
       <option name="PHP Expression" value="true" />
       <option name="PHP Statement" value="true" />
+    </context>
+  </template>
+  <template name="bbase" value="@extends(&quot;layouts.app&quot;)&#10;&#10;@section(&quot;content&quot;)&#10;    $END$&#10;@endsection" description="Laravel Layout Base" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="HTML_TEXT" value="true" />
+      <option name="VUE_TOP_LEVEL" value="true" />
+    </context>
+  </template>
+  <template name="reqval" value="$data = $request-&gt;validate([&#10;    $END$&#10;]);" description="Laravel Request Validate" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="PHP Expression" value="true" />
+      <option name="PHP Statement" value="true" />
+    </context>
+  </template>
+  <template name="retred" value="return $this-&gt;responseFactory-&gt;redirectToRoute(&quot;$ROUTE$&quot;);" description="Laravel Controller Return RedirectToRoute" toReformat="true" toShortenFQNames="true">
+    <variable name="ROUTE" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP Expression" value="true" />
+      <option name="PHP Statement" value="true" />
+    </context>
+  </template>
+  <template name="forpem" value="&lt;div&gt;&#10;    @if($$$ITEM$s-&gt;isNotEmpty())&#10;        &lt;div class=&quot;table-responsive&quot;&gt;&#10;            &lt;table class=&quot;table table-sm table-striped table-hover&quot;&gt;&#10;                &lt;thead&gt;&#10;                &lt;tr&gt;&#10;                    &lt;th&gt; #&lt;/th&gt;&#10;                    $END$&#10;                &lt;/tr&gt;&#10;                &lt;/thead&gt;&#10;&#10;                &lt;tbody&gt;&#10;                @foreach ($$$ITEM$s as $$$ITEM$)&#10;                    &lt;tr&gt;&#10;                        &lt;td&gt; {{ $$$ITEM$s-&gt;firstItem() + $$loop-&gt;index }} &lt;/td&gt;&#10;                    &lt;/tr&gt;&#10;                @endforeach&#10;                &lt;/tbody&gt;&#10;            &lt;/table&gt;&#10;        &lt;/div&gt;&#10;&#10;        &lt;div class=&quot;d-flex justify-content-center&quot;&gt;&#10;            {{ $$$ITEM$s-&gt;links() }}&#10;        &lt;/div&gt;&#10;&#10;    @else&#10;        &lt;div class=&quot;alert alert-warning&quot;&gt;&#10;            &lt;i class=&quot;fas fa-exclamation-triangle&quot;&gt;&lt;/i&gt;&#10;            {{ __(&quot;messages.errors.no_data&quot;) }}&#10;        &lt;/div&gt;&#10;    @endif&#10;&lt;/div&gt;" description="Blade ForEach Table With Empty Message And Pagination" toReformat="true" toShortenFQNames="true">
+    <variable name="ITEM" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="true" />
+      <option name="VUE_TOP_LEVEL" value="true" />
+    </context>
+  </template>
+  <template name="lapbut" value="&lt;button&#10;        x-data=&quot;{}&quot;&#10;        x-on:click=&quot;&#10;        window.confirmDialog()&#10;            .then(response =&gt; {&#10;                if (response.value) {&#10;                    window.livewire.emit('$ITEM$:$ACTION$', {{ $$$ITEM$-&gt;id }})&#10;                }&#10;            })&quot;&#10;        class=&quot;btn btn-outline-danger btn-sm&quot;&gt;&#10;    Hapus&#10;&lt;/button&gt;" description="Laravel Livewire Alpinejs Button" toReformat="true" toShortenFQNames="true">
+    <variable name="ITEM" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="ACTION" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="true" />
+      <option name="VUE_TEMPLATE" value="true" />
+    </context>
+  </template>
+  <template name="retvi" value="return $this-&gt;responseFactory-&gt;view(&quot;$RESOURCE$.$METHOD$&quot;);" description="Laravel Controller Return View" toReformat="true" toShortenFQNames="true">
+    <variable name="RESOURCE" expression="regularExpression(snakeCase(regularExpression(phpClassName(), &quot;^(.*)Controller&quot;,  &quot;$1&quot;)), &quot;_&quot;, &quot;-&quot;)" defaultValue="" alwaysStopAt="true" />
+    <variable name="METHOD" expression="groovyScript(&quot;import com.intellij.openapi.editor.Editor;import com.intellij.openapi.fileEditor.FileEditorManager;import com.intellij.openapi.project.ProjectManager;import com.intellij.psi.util.PsiTreeUtil;import com.intellij.psi.PsiDocumentManager;import com.intellij.psi.PsiElement;import com.intellij.psi.PsiNamedElement;import com.intellij.openapi.editor.impl.EditorImpl;import com.jetbrains.php.lang.psi.elements.impl.MethodImpl;def project = ProjectManager.getInstance().openProjects.first();def textEditor = _editor;def document = textEditor.document;def offset = textEditor.caretModel.offset;def psiFile = PsiDocumentManager.getInstance(project).getPsiFile(document);def psiElement = psiFile.findElementAt(offset);def method = PsiTreeUtil.getParentOfType(psiElement, MethodImpl.class);method.name; &quot;)" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP Expression" value="true" />
+      <option name="PHP Statement" value="true" />
+    </context>
+  </template>
+  <template name="bscript" value="@push(&quot;scripts&quot;)&#10;    &lt;script type=&quot;application/javascript&quot;&gt;&#10;        &#10;    &lt;/script&gt;&#10;@endpush" description="Blade Push Script" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="HTML_TEXT" value="true" />
+      <option name="VUE_TEMPLATE" value="true" />
+    </context>
+  </template>
+  <template name="bsele2" value="&lt;div class=&quot;form-group&quot;&gt;&#10;    &lt;label for=&quot;$FIELD$&quot;&gt; $LABEL$: &lt;/label&gt;&#10;    &lt;select&#10;            id=&quot;$FIELD$&quot;&#10;            type=&quot;text&quot;&#10;            class=&quot;form-control @error(&quot;$FIELD$&quot;) is-invalid @enderror&quot;&#10;            name=&quot;$FIELD$&quot;&#10;    &gt;&#10;    &lt;/select&gt;&#10;    @error(&quot;$FIELD$&quot;)&#10;    &lt;span class=&quot;invalid-feedback&quot;&gt;&#10;        {{ $message }}&#10;    &lt;/span&gt;&#10;    @enderror&#10;&#10;    @push(&quot;scripts&quot;)&#10;        &lt;script type=&quot;application/javascript&quot;&gt;&#10;            $(&quot;#$FIELD$&quot;).select2({&#10;                ajax: {&#10;                    url: &quot;{{ route(&quot;$SEARCH_ROUTE$&quot;) }}&quot;,&#10;                },&#10;                theme: &quot;bootstrap4&quot;&#10;            })&#10;        &lt;/script&gt;&#10;    @endpush&#10;&lt;/div&gt;" description="Blade Bootstrap4 Select2" toReformat="true" toShortenFQNames="true">
+    <variable name="FIELD" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="LABEL" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="SEARCH_ROUTE" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="true" />
+      <option name="VUE_TEMPLATE" value="true" />
+    </context>
+  </template>
+  <template name="lvlinput" value="&lt;label for=&quot;$FIELD$&quot;&gt;&#10;    &lt;input&#10;            id=&quot;$FIELD$&quot;&#10;            wire:key=&quot;$ARRAY$.{{ $$$INDEX$ }}.$FIELD$&quot;&#10;            wire:model=&quot;$ARRAY$.{{ $$$INDEX$ }}.$FIELD$&quot;&#10;            type=&quot;number&quot;&#10;            placeholder=&quot;$CAPTION$&quot;&#10;            class=&quot;form-control form-control-sm text-right @error(&quot;$ARRAY$.{$$$INDEX$}.$FIELD$&quot;) is-invalid @enderror&quot;&#10;            name=&quot;$FIELD$&quot;&#10;            value=&quot;{{ old(&quot;$FIELD$&quot;) }}&quot;&#10;    /&gt;&#10;    @error(&quot;$ARRAY$.{$$$INDEX$}.$FIELD$&quot;)&#10;    &lt;span class=&quot;invalid-feedback&quot;&gt;&#10;        {{ $$message }}&#10;    &lt;/span&gt;&#10;    @enderror&#10;&lt;/label&gt;" description="Laravel Livewire Line Input Bootstrap 4" toReformat="true" toShortenFQNames="true">
+    <variable name="FIELD" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="ARRAY" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="INDEX" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="CAPTION" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="true" />
+      <option name="VUE_TEMPLATE" value="true" />
+    </context>
+  </template>
+  <template name="closval" value="function ($attribute, $value, $fail) {&#10;    if ($value === 'foo') {&#10;        $fail($attribute.' is invalid.');&#10;    }&#10;}," description="Laravel Closure Validation" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="PHP Expression" value="true" />
+    </context>
+  </template>
+  <template name="sinput" value="&lt;div class=&quot;form-group&quot;&gt;&#10;    &lt;label for=&quot;$FIELD$&quot;&gt; $CAPTION$: &lt;/label&gt;&#10;    &lt;input&#10;            value=&quot;{{ $$$ENTITY$-&gt;$ATTRIBUTE$ }}&quot;&#10;            id=&quot;$FIELD$&quot;&#10;            type=&quot;text&quot;&#10;            class=&quot;form-control&quot;&#10;    /&gt;&#10;&lt;/div&gt;" description="Bootstrap 4 Blade Static Input" toReformat="true" toShortenFQNames="true">
+    <variable name="FIELD" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="CAPTION" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="ENTITY" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="ATTRIBUTE" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="true" />
+      <option name="VUE_TEMPLATE" value="true" />
+    </context>
+  </template>
+  <template name="gindex" value="DB::unprepared(&quot;CREATE INDEX IF NOT EXISTS $NAME$_gin ON $TABLE$ USING gin($NAME$ gin_trgm_ops)&quot;);" description="Laravel Create GIN Index on Postgres" toReformat="true" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="&quot;column_name&quot;" alwaysStopAt="true" />
+    <variable name="TABLE" expression="" defaultValue="&quot;table_name&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="PHP Expression" value="true" />
+      <option name="PHP Statement" value="true" />
+    </context>
+  </template>
+  <template name="gistdex" value="DB::unprepared(&quot;CREATE INDEX IF NOT EXISTS $NAME$_gist ON $TABLE$ USING gist($NAME$ gist_trgm_ops)&quot;);" description="Laravel Create GiST Index on Postgres" toReformat="true" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="&quot;column_name&quot;" alwaysStopAt="true" />
+    <variable name="TABLE" expression="" defaultValue="&quot;table_name&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="PHP Expression" value="true" />
+      <option name="PHP Statement" value="true" />
+    </context>
+  </template>
+  <template name="rescon" value="Route::resource('$RESOURCE_ROUTE_NAME$', class_basename($RESOURCE_NAME$Controller::class))&#10;    -&gt;except([&quot;destroy&quot;]);" description="Laravel Resource Controller" toReformat="true" toShortenFQNames="true">
+    <variable name="RESOURCE_ROUTE_NAME" expression="" defaultValue="&quot;item&quot;" alwaysStopAt="true" />
+    <variable name="RESOURCE_NAME" expression="capitalize(camelCase(RESOURCE_ROUTE_NAME))" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP Expression" value="true" />
+      <option name="PHP Statement" value="true" />
+    </context>
+  </template>
+  <template name="mlqset" value="use WithPagination;&#10;&#10;public $query;&#10;&#10;protected $updatesQueryString = [&#10;    &quot;query&quot; =&gt; [&quot;except&quot; =&gt; &quot;&quot;],&#10;];&#10;&#10;public function updatingQuery()&#10;{&#10;    $this-&gt;resetPage();&#10;}" description="Laravel Livewire Queryable Set" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="PHP Class Member" value="true" />
+    </context>
+  </template>
+  <template name="clepush" value="@push(&quot;scripts&quot;)&#10;    &lt;script&gt;&#10;        cleaveNumeral(&quot;#$ELEMENT_ID$&quot;)&#10;    &lt;/script&gt;&#10;@endpush" description="Blade Cleave Push to Stack" toReformat="true" toShortenFQNames="true">
+    <variable name="ELEMENT_ID" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="true" />
+      <option name="VUE_TEMPLATE" value="true" />
+    </context>
+  </template>
+  <template name="trydel" value="try {&#10;    $END$        &#10;    SessionHelper::flashMessage(&#10;        __(&quot;messages.delete.success&quot;),&#10;        MessageState::STATE_SUCCESS,&#10;    );&#10;} catch (\Throwable $throwable) {&#10;    SessionHelper::flashMessage(&#10;        __(&quot;messages.delete.failure&quot;),&#10;        MessageState::STATE_DANGER,&#10;    );&#10;}" description="Livewire Try Delete" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="PHP Expression" value="true" />
+      <option name="PHP Statement" value="true" />
+    </context>
+  </template>
+  <template name="topbar" value="&lt;div class=&quot;d-flex justify-content-center py-3&quot;&gt;&#10;    &lt;div class=&quot;flex-fill&quot;&gt;&#10;        &lt;label for=&quot;query&quot;&#10;               class=&quot;w-100&quot;&#10;        &gt;&#10;            &lt;input&#10;                    placeholder=&quot;Cari...&quot;&#10;                    wire:model=&quot;query&quot;&#10;                    id=&quot;query&quot;&#10;                    type=&quot;text&quot;&#10;                    class=&quot;form-control&quot;&#10;            &gt;&#10;        &lt;/label&gt;&#10;    &lt;/div&gt;&#10;&#10;    &lt;div class=&quot;ml-3&quot;&gt;&#10;        &lt;a href=&quot;{{ route(&quot;$RESOURCE$.create&quot;) }}&quot;&#10;           class=&quot;btn btn-primary&quot;&#10;        &gt;&#10;            Tambah&#10;        &lt;/a&gt;&#10;    &lt;/div&gt;&#10;&lt;/div&gt;" description="Top Bar" toReformat="true" toShortenFQNames="true">
+    <variable name="RESOURCE" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="true" />
+      <option name="VUE_TEMPLATE" value="true" />
+    </context>
+  </template>
+  <template name="bcard" value="&lt;div class=&quot;card&quot;&gt;&#10;    &lt;div class=&quot;card-body&quot;&gt;&#10;        $END$   &#10;    &lt;/div&gt;&#10;&lt;/div&gt;" description="Bootstrap 4 Card" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="HTML_TEXT" value="true" />
+      <option name="VUE_TEMPLATE" value="true" />
+    </context>
+  </template>
+  <template name="bfred" value="&lt;form action=&quot;{{ route(&quot;$ROUTE$.update&quot;) }}&quot; method=&quot;POST&quot;&gt;&#10;    @csrf&#10;    @method(&quot;PUT&quot;)&#10;    &#10;    $END$&#10;    &#10;&lt;/form&gt;" description="Bootstrap 4 Laravel Form Edit" toReformat="true" toShortenFQNames="true">
+    <variable name="ROUTE" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="true" />
+      <option name="VUE_TEMPLATE" value="true" />
+    </context>
+  </template>
+  <template name="bcred" value="&lt;form action=&quot;{{ route(&quot;$ROUTE$.store&quot;) }}&quot; method=&quot;POST&quot; enctype=&quot;multipart/form-data&quot;&gt;&#10;    @csrf&#10;    @method(&quot;POST&quot;)&#10;    &#10;    $END$&#10;    &#10;&lt;/form&gt;" description="Bootstrap 4 Laravel Form Create" toReformat="true" toShortenFQNames="true">
+    <variable name="ROUTE" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="true" />
+      <option name="VUE_TEMPLATE" value="true" />
+    </context>
+  </template>
+  <template name="xm" value="&lt;x-messages&gt;&lt;/x-messages&gt;" description="Blade Message Partials Component Include" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="HTML_TEXT" value="true" />
+      <option name="VUE_TEMPLATE" value="true" />
     </context>
   </template>
 </templateSet>

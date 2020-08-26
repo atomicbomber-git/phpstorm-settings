@@ -5,17 +5,17 @@
   <action id="Console.Jdbc.Execute">
     <keyboard-shortcut first-keystroke="shift ctrl alt back_slash" />
   </action>
-  <action id="EditorDecreaseFontSize">
-    <keyboard-shortcut first-keystroke="shift ctrl minus" />
-  </action>
-  <action id="EditorIncreaseFontSize">
-    <keyboard-shortcut first-keystroke="shift ctrl equals" />
+  <action id="GenerateGroup">
+    <keyboard-shortcut first-keystroke="shift ctrl alt comma" />
   </action>
   <action id="InsertLiveTemplate">
     <keyboard-shortcut first-keystroke="shift ctrl i" />
   </action>
   <action id="InvalidateCaches">
     <keyboard-shortcut first-keystroke="shift ctrl alt close_bracket" />
+  </action>
+  <action id="Macro.Reformat Everything">
+    <keyboard-shortcut first-keystroke="ctrl alt back_slash" />
   </action>
   <action id="ManageRecentProjects">
     <keyboard-shortcut first-keystroke="shift ctrl j" />
