@@ -2,31 +2,28 @@
   <action id="ActivateDatabaseToolWindow">
     <keyboard-shortcut first-keystroke="shift ctrl alt space" />
   </action>
-  <action id="CodeCleanup">
-    <keyboard-shortcut first-keystroke="alt c" />
-  </action>
   <action id="Console.Jdbc.Execute">
     <keyboard-shortcut first-keystroke="shift ctrl alt back_slash" />
   </action>
-  <action id="HideAllWindows">
-    <keyboard-shortcut first-keystroke="ctrl alt back_space" />
+  <action id="GenerateGroup">
+    <keyboard-shortcut first-keystroke="shift ctrl alt comma" />
   </action>
   <action id="InsertLiveTemplate">
     <keyboard-shortcut first-keystroke="shift ctrl i" />
   </action>
+  <action id="InvalidateCaches">
+    <keyboard-shortcut first-keystroke="shift ctrl alt close_bracket" />
+  </action>
+  <action id="Macro.Reformat Everything">
+    <keyboard-shortcut first-keystroke="ctrl alt back_slash" />
+  </action>
   <action id="ManageRecentProjects">
     <keyboard-shortcut first-keystroke="shift ctrl j" />
-  </action>
-  <action id="QuickJavaDoc">
-    <keyboard-shortcut first-keystroke="shift alt v" />
   </action>
   <action id="SaveAsTemplate">
     <keyboard-shortcut first-keystroke="shift alt insert" />
   </action>
   <action id="SelectInProjectView">
     <keyboard-shortcut first-keystroke="shift ctrl slash" />
-  </action>
-  <action id="StructuralSearchPlugin.StructuralReplaceAction">
-    <keyboard-shortcut first-keystroke="shift alt h" />
   </action>
 </keymap>

@@ -1,15 +1,5 @@
 <templateSet group="font-awesome5-free">
-  <template name="fa5-plus" value="&lt;i class=&quot;$1$ fa-plus $2$ $3$$4$&quot;&gt;&lt;/i&gt;$END$" description="plus" toReformat="true" toShortenFQNames="false">
-    <variable name="1" expression="enum(&quot;fas&quot;,&quot;fab&quot;)" defaultValue="" alwaysStopAt="true" />
-    <variable name="2" expression="enum(&quot;&quot;,&quot;fa-xs&quot;,&quot;fa-sm&quot;,&quot;fa-lg&quot;,&quot;fa-2x&quot;,&quot;fa-3x&quot;,&quot;fa-4x&quot;,&quot;fa-5x&quot;,&quot;fa-6x&quot;,&quot;fa-7x&quot;,&quot;fa-8x&quot;,&quot;fa-9x&quot;,&quot;fa-10x&quot;)" defaultValue="" alwaysStopAt="true" />
-    <variable name="3" expression="enum(&quot;&quot;,&quot;fa-fw&quot;)" defaultValue="" alwaysStopAt="true" />
-    <variable name="4" expression="" defaultValue="" alwaysStopAt="true" />
-    <context>
-      <option name="GSP" value="true" />
-      <option name="JSP" value="true" />
-    </context>
-  </template>
-  <template name="fa5-print" value="&lt;i class=&quot;$1$ fa-print $2$ $3$$4$&quot;&gt;&lt;/i&gt;$END$" description="print" toReformat="true" toShortenFQNames="false">
+  <template name="fa5-pencil-alt" value="&lt;i class=&quot;$1$ fa-pencil-alt $2$ $3$$4$&quot;&gt;&lt;/i&gt;$END$" description="Alternate Pencil" toReformat="true" toShortenFQNames="false">
     <variable name="1" expression="enum(&quot;fas&quot;,&quot;fab&quot;)" defaultValue="" alwaysStopAt="true" />
     <variable name="2" expression="enum(&quot;&quot;,&quot;fa-xs&quot;,&quot;fa-sm&quot;,&quot;fa-lg&quot;,&quot;fa-2x&quot;,&quot;fa-3x&quot;,&quot;fa-4x&quot;,&quot;fa-5x&quot;,&quot;fa-6x&quot;,&quot;fa-7x&quot;,&quot;fa-8x&quot;,&quot;fa-9x&quot;,&quot;fa-10x&quot;)" defaultValue="" alwaysStopAt="true" />
     <variable name="3" expression="enum(&quot;&quot;,&quot;fa-fw&quot;)" defaultValue="" alwaysStopAt="true" />
@@ -8111,16 +8101,6 @@
       <option name="JSP" value="true" />
     </context>
   </template>
-  <template name="fa5-pencil-alt" value="&lt;i class=&quot;$1$ fa-pencil-alt $2$ $3$$4$&quot;&gt;&lt;/i&gt;$END$" description="Alternate Pencil" toReformat="true" toShortenFQNames="false">
-    <variable name="1" expression="enum(&quot;fas&quot;,&quot;fab&quot;)" defaultValue="" alwaysStopAt="true" />
-    <variable name="2" expression="enum(&quot;&quot;,&quot;fa-xs&quot;,&quot;fa-sm&quot;,&quot;fa-lg&quot;,&quot;fa-2x&quot;,&quot;fa-3x&quot;,&quot;fa-4x&quot;,&quot;fa-5x&quot;,&quot;fa-6x&quot;,&quot;fa-7x&quot;,&quot;fa-8x&quot;,&quot;fa-9x&quot;,&quot;fa-10x&quot;)" defaultValue="" alwaysStopAt="true" />
-    <variable name="3" expression="enum(&quot;&quot;,&quot;fa-fw&quot;)" defaultValue="" alwaysStopAt="true" />
-    <variable name="4" expression="" defaultValue="" alwaysStopAt="true" />
-    <context>
-      <option name="GSP" value="true" />
-      <option name="JSP" value="true" />
-    </context>
-  </template>
   <template name="fa5-pencil-ruler" value="&lt;i class=&quot;$1$ fa-pencil-ruler $2$ $3$$4$&quot;&gt;&lt;/i&gt;$END$" description="Pencil Ruler" toReformat="true" toShortenFQNames="false">
     <variable name="1" expression="enum(&quot;fas&quot;,&quot;fab&quot;)" defaultValue="" alwaysStopAt="true" />
     <variable name="2" expression="enum(&quot;&quot;,&quot;fa-xs&quot;,&quot;fa-sm&quot;,&quot;fa-lg&quot;,&quot;fa-2x&quot;,&quot;fa-3x&quot;,&quot;fa-4x&quot;,&quot;fa-5x&quot;,&quot;fa-6x&quot;,&quot;fa-7x&quot;,&quot;fa-8x&quot;,&quot;fa-9x&quot;,&quot;fa-10x&quot;)" defaultValue="" alwaysStopAt="true" />
@@ -8441,6 +8421,16 @@
       <option name="JSP" value="true" />
     </context>
   </template>
+  <template name="fa5-plus" value="&lt;i class=&quot;$1$ fa-plus $2$ $3$$4$&quot;&gt;&lt;/i&gt;$END$" description="plus" toReformat="true" toShortenFQNames="false">
+    <variable name="1" expression="enum(&quot;fas&quot;,&quot;fab&quot;)" defaultValue="" alwaysStopAt="true" />
+    <variable name="2" expression="enum(&quot;&quot;,&quot;fa-xs&quot;,&quot;fa-sm&quot;,&quot;fa-lg&quot;,&quot;fa-2x&quot;,&quot;fa-3x&quot;,&quot;fa-4x&quot;,&quot;fa-5x&quot;,&quot;fa-6x&quot;,&quot;fa-7x&quot;,&quot;fa-8x&quot;,&quot;fa-9x&quot;,&quot;fa-10x&quot;)" defaultValue="" alwaysStopAt="true" />
+    <variable name="3" expression="enum(&quot;&quot;,&quot;fa-fw&quot;)" defaultValue="" alwaysStopAt="true" />
+    <variable name="4" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="GSP" value="true" />
+      <option name="JSP" value="true" />
+    </context>
+  </template>
   <template name="fa5-plus-circle" value="&lt;i class=&quot;$1$ fa-plus-circle $2$ $3$$4$&quot;&gt;&lt;/i&gt;$END$" description="Plus Circle" toReformat="true" toShortenFQNames="false">
     <variable name="1" expression="enum(&quot;fas&quot;,&quot;fab&quot;)" defaultValue="" alwaysStopAt="true" />
     <variable name="2" expression="enum(&quot;&quot;,&quot;fa-xs&quot;,&quot;fa-sm&quot;,&quot;fa-lg&quot;,&quot;fa-2x&quot;,&quot;fa-3x&quot;,&quot;fa-4x&quot;,&quot;fa-5x&quot;,&quot;fa-6x&quot;,&quot;fa-7x&quot;,&quot;fa-8x&quot;,&quot;fa-9x&quot;,&quot;fa-10x&quot;)" defaultValue="" alwaysStopAt="true" />
@@ -8592,6 +8582,16 @@
     </context>
   </template>
   <template name="fa5-prescription-bottle-alt" value="&lt;i class=&quot;$1$ fa-prescription-bottle-alt $2$ $3$$4$&quot;&gt;&lt;/i&gt;$END$" description="Alternate Prescription Bottle" toReformat="true" toShortenFQNames="false">
+    <variable name="1" expression="enum(&quot;fas&quot;,&quot;fab&quot;)" defaultValue="" alwaysStopAt="true" />
+    <variable name="2" expression="enum(&quot;&quot;,&quot;fa-xs&quot;,&quot;fa-sm&quot;,&quot;fa-lg&quot;,&quot;fa-2x&quot;,&quot;fa-3x&quot;,&quot;fa-4x&quot;,&quot;fa-5x&quot;,&quot;fa-6x&quot;,&quot;fa-7x&quot;,&quot;fa-8x&quot;,&quot;fa-9x&quot;,&quot;fa-10x&quot;)" defaultValue="" alwaysStopAt="true" />
+    <variable name="3" expression="enum(&quot;&quot;,&quot;fa-fw&quot;)" defaultValue="" alwaysStopAt="true" />
+    <variable name="4" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="GSP" value="true" />
+      <option name="JSP" value="true" />
+    </context>
+  </template>
+  <template name="fa5-print" value="&lt;i class=&quot;$1$ fa-print $2$ $3$$4$&quot;&gt;&lt;/i&gt;$END$" description="print" toReformat="true" toShortenFQNames="false">
     <variable name="1" expression="enum(&quot;fas&quot;,&quot;fab&quot;)" defaultValue="" alwaysStopAt="true" />
     <variable name="2" expression="enum(&quot;&quot;,&quot;fa-xs&quot;,&quot;fa-sm&quot;,&quot;fa-lg&quot;,&quot;fa-2x&quot;,&quot;fa-3x&quot;,&quot;fa-4x&quot;,&quot;fa-5x&quot;,&quot;fa-6x&quot;,&quot;fa-7x&quot;,&quot;fa-8x&quot;,&quot;fa-9x&quot;,&quot;fa-10x&quot;)" defaultValue="" alwaysStopAt="true" />
     <variable name="3" expression="enum(&quot;&quot;,&quot;fa-fw&quot;)" defaultValue="" alwaysStopAt="true" />
