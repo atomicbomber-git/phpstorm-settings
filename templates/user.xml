@@ -340,4 +340,10 @@
       <option name="VUE_TEMPLATE" value="true" />
     </context>
   </template>
+  <template name="pdump" value="@php&#10;    dump($END$)&#10;@endphp" description="Blade PHP Dump" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="HTML_TEXT" value="true" />
+      <option name="VUE_TEMPLATE" value="true" />
+    </context>
+  </template>
 </templateSet>
