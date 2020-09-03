@@ -322,4 +322,28 @@
       <option name="VUE_TEMPLATE" value="true" />
     </context>
   </template>
+  <template name="lwf" value="&lt;form wire:submit.prevent=&quot;onFormSubmit&quot;&gt;&#10;    $END$&#10;&lt;/form&gt;" description="Laravel Livewire Form" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="HTML_TEXT" value="true" />
+      <option name="VUE_TEMPLATE" value="true" />
+    </context>
+  </template>
+  <template name="butbut" value="&lt;button type=&quot;button&quot;&gt;&#10;    $END$&#10;&lt;/button&gt;" description="button[type=&quot;button&quot;]" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="HTML_TEXT" value="true" />
+      <option name="VUE_TEMPLATE" value="true" />
+    </context>
+  </template>
+  <template name="blwp" value="@push(&quot;scripts&quot;)&#10;    &lt;script type=&quot;application/javascript&quot;&gt;&#10;        document.addEventListener(&quot;livewire:load&quot;, function (event) {&#10;            window.livewire.hook(&quot;afterDomUpdate&quot;, () =&gt; {&#10;            &#10;            });&#10;        });&#10;    &lt;/script&gt;&#10;@endpush" description="Blade Livewire Push Hook" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="HTML_TEXT" value="true" />
+      <option name="VUE_TEMPLATE" value="true" />
+    </context>
+  </template>
+  <template name="pdump" value="@php&#10;    dump($END$)&#10;@endphp" description="Blade PHP Dump" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="HTML_TEXT" value="true" />
+      <option name="VUE_TEMPLATE" value="true" />
+    </context>
+  </template>
 </templateSet>

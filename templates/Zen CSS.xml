@@ -1,4 +1,7 @@
 <templateSet group="Zen CSS">
+  <template name="ml" value="margin-left: $END$;" description="margin-left:...;" toReformat="true" toShortenFQNames="true">
+    <context />
+  </template>
   <template name="@i" value="@import url($VAR0$);" description="@import url(...);" toReformat="true" toShortenFQNames="true">
     <variable name="VAR0" expression="" defaultValue="&quot;&quot;" alwaysStopAt="true" />
     <context />
@@ -501,9 +504,6 @@
     <context />
   </template>
   <template name="mb:a" value="margin-bottom:auto;" description="margin-bottom:auto;" toReformat="true" toShortenFQNames="true">
-    <context />
-  </template>
-  <template name="ml" value="margin-left: $END$;" description="margin-left:...;" toReformat="true" toShortenFQNames="true">
     <context />
   </template>
   <template name="ml:a" value="margin-left:auto;" description="margin-left:auto;" toReformat="true" toShortenFQNames="true">
