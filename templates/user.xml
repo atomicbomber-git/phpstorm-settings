@@ -346,4 +346,11 @@
       <option name="VUE_TEMPLATE" value="true" />
     </context>
   </template>
+  <template name="sh" value="{{ $$upaya_kesehatan-&gt;item_rencana_usulan_kegiatan-&gt;$FIELD$ }}" toReformat="true" toShortenFQNames="true">
+    <variable name="FIELD" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="true" />
+      <option name="VUE_TEMPLATE" value="true" />
+    </context>
+  </template>
 </templateSet>
