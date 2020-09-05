@@ -353,4 +353,12 @@
       <option name="VUE_TEMPLATE" value="true" />
     </context>
   </template>
+  <template name="sha" value="&lt;label for=&quot;$FIELD$&quot;&gt;&#10;        &lt;textarea&#10;                id=&quot;item_{{ &quot;{$$loop-&gt;parent-&gt;index}{$$loop-&gt;index}&quot; }}&quot;&#10;                type=&quot;text&quot;&#10;                placeholder=&quot;$LABEL$&quot;&#10;                class=&quot;form-control @error(&quot;$FIELD$&quot;) is-invalid @enderror&quot;&#10;                name=&quot;item[{{ &quot;{$$loop-&gt;parent-&gt;index}{$$loop-&gt;index}&quot; }}]$FIELD$&quot;&#10;        &gt;{{ old(&quot;$FIELD$&quot;) }}&lt;/textarea&gt;&#10;    @error(&quot;$FIELD$&quot;)&#10;    &lt;span class=&quot;invalid-feedback&quot;&gt;&#10;            {{ $$message }}&#10;        &lt;/span&gt;&#10;    @enderror&#10;&lt;/label&gt;" toReformat="true" toShortenFQNames="true">
+    <variable name="FIELD" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="LABEL" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="true" />
+      <option name="VUE_TEMPLATE" value="true" />
+    </context>
+  </template>
 </templateSet>
