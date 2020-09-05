@@ -30,4 +30,10 @@
   <action id="SelectInProjectView">
     <keyboard-shortcut first-keystroke="shift ctrl slash" />
   </action>
+  <action id="me.laria.code.idea_caseconv.DashCaseAction">
+    <keyboard-shortcut first-keystroke="shift ctrl alt n" />
+  </action>
+  <action id="me.laria.code.idea_caseconv.SnakeCaseAction">
+    <keyboard-shortcut first-keystroke="shift ctrl alt s" />
+  </action>
 </keymap>
