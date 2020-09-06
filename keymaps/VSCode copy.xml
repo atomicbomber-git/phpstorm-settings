@@ -24,10 +24,19 @@
     <keyboard-shortcut first-keystroke="shift ctrl t" />
     <keyboard-shortcut first-keystroke="shift ctrl alt t" />
   </action>
+  <action id="QuickJavaDoc">
+    <keyboard-shortcut first-keystroke="shift alt v" />
+  </action>
   <action id="SaveAsTemplate">
     <keyboard-shortcut first-keystroke="shift alt insert" />
   </action>
   <action id="SelectInProjectView">
     <keyboard-shortcut first-keystroke="shift ctrl slash" />
+  </action>
+  <action id="me.laria.code.idea_caseconv.DashCaseAction">
+    <keyboard-shortcut first-keystroke="shift ctrl alt n" />
+  </action>
+  <action id="me.laria.code.idea_caseconv.SnakeCaseAction">
+    <keyboard-shortcut first-keystroke="shift ctrl alt s" />
   </action>
 </keymap>
