@@ -1,45 +1,12 @@
 <keymap version="1" name="VSCode copy" parent="VSCode">
-  <action id="ActivateDatabaseToolWindow">
-    <keyboard-shortcut first-keystroke="shift ctrl alt space" />
-  </action>
-  <action id="ChangeColorScheme">
-    <keyboard-shortcut first-keystroke="shift ctrl alt k" />
-  </action>
-  <action id="Console.Jdbc.Execute">
-    <keyboard-shortcut first-keystroke="shift ctrl alt back_slash" />
-  </action>
-  <action id="GenerateGroup">
-    <keyboard-shortcut first-keystroke="shift ctrl alt comma" />
-  </action>
-  <action id="InsertLiveTemplate">
-    <keyboard-shortcut first-keystroke="shift ctrl i" />
-  </action>
-  <action id="InvalidateCaches">
-    <keyboard-shortcut first-keystroke="shift ctrl alt close_bracket" />
-  </action>
-  <action id="Macro.Reformat Everything">
-    <keyboard-shortcut first-keystroke="ctrl alt back_slash" />
-  </action>
-  <action id="ManageRecentProjects">
+  <action id="ActivateProjectToolWindow">
+    <keyboard-shortcut first-keystroke="shift ctrl e" />
     <keyboard-shortcut first-keystroke="shift ctrl j" />
   </action>
-  <action id="OpenTinkerConsoleAction">
-    <keyboard-shortcut first-keystroke="shift ctrl t" />
-    <keyboard-shortcut first-keystroke="shift ctrl alt t" />
-  </action>
-  <action id="QuickJavaDoc">
-    <keyboard-shortcut first-keystroke="shift alt v" />
-  </action>
-  <action id="SaveAsTemplate">
-    <keyboard-shortcut first-keystroke="shift alt insert" />
+  <action id="ManageRecentProjects">
+    <keyboard-shortcut first-keystroke="shift ctrl alt j" />
   </action>
   <action id="SelectInProjectView">
     <keyboard-shortcut first-keystroke="shift ctrl slash" />
-  </action>
-  <action id="me.laria.code.idea_caseconv.DashCaseAction">
-    <keyboard-shortcut first-keystroke="shift ctrl alt n" />
-  </action>
-  <action id="me.laria.code.idea_caseconv.SnakeCaseAction">
-    <keyboard-shortcut first-keystroke="shift ctrl alt s" />
   </action>
 </keymap>
