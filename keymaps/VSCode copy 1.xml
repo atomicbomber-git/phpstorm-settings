@@ -1,5 +1,20 @@
 <keymap version="1" name="VSCode copy 1" parent="VSCode">
+  <action id="ActivateDatabaseToolWindow">
+    <keyboard-shortcut first-keystroke="shift ctrl alt space" />
+  </action>
+  <action id="ChangeColorScheme">
+    <keyboard-shortcut first-keystroke="shift ctrl alt k" />
+  </action>
+  <action id="Console.Jdbc.Execute">
+    <keyboard-shortcut first-keystroke="shift ctrl alt back_slash" />
+  </action>
+  <action id="InsertLiveTemplate">
+    <keyboard-shortcut first-keystroke="shift ctrl i" />
+  </action>
   <action id="ManageRecentProjects">
     <keyboard-shortcut first-keystroke="shift ctrl j" />
+  </action>
+  <action id="SelectInProjectView">
+    <keyboard-shortcut first-keystroke="shift ctrl slash" />
   </action>
 </keymap>
