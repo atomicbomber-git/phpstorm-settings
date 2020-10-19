@@ -404,4 +404,9 @@
       <option name="VUE_TEMPLATE" value="true" />
     </context>
   </template>
+  <template name="homeswitch" value="public static function home()&#10;{&#10;    /** @var User $user */&#10;    $user = Auth::user();&#10;&#10;    switch ($user-&gt;level ?? null) {&#10;        case User::LEVEL_REGULAR:&#10;        default:&#10;            return null;&#10;    }&#10;}" description="Laravel Home Route Switcher" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="PHP Class Member" value="true" />
+    </context>
+  </template>
 </templateSet>
