@@ -409,4 +409,11 @@
       <option name="PHP Class Member" value="true" />
     </context>
   </template>
+  <template name="fid" value="$table-&gt;foreignId('$ENTITY$_id')-&gt;constrained()-&gt;index();" description="Laravel Migration Foreign ID" toReformat="true" toShortenFQNames="true">
+    <variable name="ENTITY" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP Expression" value="true" />
+      <option name="PHP Statement" value="true" />
+    </context>
+  </template>
 </templateSet>
