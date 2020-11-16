@@ -416,4 +416,10 @@
       <option name="PHP Statement" value="true" />
     </context>
   </template>
+  <template name="custqbuilder" value="/** return \App\QueryBuilders\$ENTITY$Builder */&#10;public function newEloquentBuilder($$query)&#10;{&#10;    return new \App\QueryBuilders\$ENTITY$Builder($$query);&#10;}&#10;&#10;public static function query(): \App\QueryBuilders\$ENTITY$Builder&#10;{&#10;    return parent::query();&#10;}" description="Eloquent Custom Query Builder" toReformat="true" toShortenFQNames="true">
+    <variable name="ENTITY" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP Class Member" value="true" />
+    </context>
+  </template>
 </templateSet>
