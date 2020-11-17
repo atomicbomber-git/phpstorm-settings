@@ -422,4 +422,10 @@
       <option name="PHP Class Member" value="true" />
     </context>
   </template>
+  <template name="alpsubmitmodal" value="x-data=&quot;{}&quot;&#10;@submit.prevent=&quot;confirmDialog().then(ok =&gt; ok &amp;&amp; Livewire.emit('submit'))&quot;" description="Alpine Submit Sweetalert Modal" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="HTML" value="true" />
+      <option name="HTML_TEXT" value="false" />
+    </context>
+  </template>
 </templateSet>
