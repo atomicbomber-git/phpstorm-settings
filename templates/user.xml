@@ -428,4 +428,11 @@
       <option name="HTML_TEXT" value="false" />
     </context>
   </template>
+  <template name="todo" value="/* TODO: $CONTENT$ */" description="Insert TODO Comment" toReformat="true" toShortenFQNames="true">
+    <variable name="CONTENT" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+      <option name="PHP Comment" value="false" />
+    </context>
+  </template>
 </templateSet>
