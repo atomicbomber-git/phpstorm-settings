@@ -435,4 +435,10 @@
       <option name="PHP Comment" value="false" />
     </context>
   </template>
+  <template name="todob" value="{{-- TODO: $TODO_TEXT$ --}}" description="Blade TODO comment" toReformat="true" toShortenFQNames="true">
+    <variable name="TODO_TEXT" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="true" />
+    </context>
+  </template>
 </templateSet>
