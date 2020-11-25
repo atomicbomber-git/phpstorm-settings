@@ -449,4 +449,12 @@
       <option name="PHP Statement" value="true" />
     </context>
   </template>
+  <template name="liveHook" value="document.addEventListener(&quot;livewire:load&quot;, function(event) {&#10;    window.Livewire.hook('message.processed', () =&gt; {&#10;        window.setTimeout(() =&gt; {&#10;            &#10;        }, 0)&#10;    });&#10;});" description="Laravel Livewire Hook" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="ES6_STATEMENT" value="true" />
+      <option name="ES6_TOP_LEVEL_STATEMENT" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+      <option name="JS_TOP_LEVEL_STATEMENT" value="true" />
+    </context>
+  </template>
 </templateSet>
