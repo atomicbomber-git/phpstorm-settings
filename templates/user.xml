@@ -441,7 +441,7 @@
       <option name="HTML_TEXT" value="true" />
     </context>
   </template>
-  <template name="pest" value="test(&quot;$DESCRIPTION$&quot;, function () {&#10;    $CURRENT$&#10;});" toReformat="true" toShortenFQNames="true">
+  <template name="pest" value="test(&quot;$DESCRIPTION$&quot;, function () {&#10;    $CURRENT$&#10;});" description="" toReformat="true" toShortenFQNames="true">
     <variable name="DESCRIPTION" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="CURRENT" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
