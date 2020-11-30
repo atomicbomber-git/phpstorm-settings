@@ -457,4 +457,16 @@
       <option name="JS_TOP_LEVEL_STATEMENT" value="true" />
     </context>
   </template>
+  <template name="xdel" value="&lt;x-delete-button&#10;    eventName=&quot;delete&quot;&#10;    :eventPayload=&quot;$$$ITEM$-&gt;id&quot;&#10;&gt;&#10;    @lang(&quot;application.delete&quot;)&#10;&lt;/x-delete-button&gt;" description="The delete component." toReformat="true" toShortenFQNames="true">
+    <variable name="ITEM" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="true" />
+    </context>
+  </template>
+  <template name="srunique" value="[&quot;required&quot;, &quot;string&quot;, Rule::unique($MODEL$::class), &quot;max:1000&quot;]" description="Laravel Validation Rule for Unique Strings" toReformat="true" toShortenFQNames="true">
+    <variable name="MODEL" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP Expression" value="true" />
+    </context>
+  </template>
 </templateSet>
