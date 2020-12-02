@@ -475,7 +475,7 @@
       <option name="PHP Statement" value="true" />
     </context>
   </template>
-  <template name="djson" value="dump(&#10;    $$$item$-&gt;toJson(JSON_PRETTY_PRINT)&#10;);" description="Dump Json" toReformat="true" toShortenFQNames="true">
+  <template name="dj" value="dump(&#10;    $$$item$-&gt;toJson(JSON_PRETTY_PRINT)&#10;);" description="Dump Json" toReformat="true" toShortenFQNames="true">
     <variable name="item" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="PHP Expression" value="true" />
