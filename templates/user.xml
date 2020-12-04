@@ -215,7 +215,7 @@
       <option name="VUE_TEMPLATE" value="true" />
     </context>
   </template>
-  <template name="lvlinput" value="&lt;label for=&quot;$FIELD$&quot;&gt;&#10;    &lt;input&#10;            id=&quot;$FIELD$&quot;&#10;            wire:key=&quot;$ARRAY$.{{ $$$INDEX$ }}.$FIELD$&quot;&#10;            wire:model=&quot;$ARRAY$.{{ $$$INDEX$ }}.$FIELD$&quot;&#10;            type=&quot;number&quot;&#10;            placeholder=&quot;$CAPTION$&quot;&#10;            class=&quot;form-control form-control-sm text-right @error(&quot;$ARRAY$.{$$$INDEX$}.$FIELD$&quot;) is-invalid @enderror&quot;&#10;            name=&quot;$FIELD$&quot;&#10;            value=&quot;{{ old(&quot;$FIELD$&quot;) }}&quot;&#10;    /&gt;&#10;    @error(&quot;$ARRAY$.{$$$INDEX$}.$FIELD$&quot;)&#10;    &lt;span class=&quot;invalid-feedback&quot;&gt;&#10;        {{ $$message }}&#10;    &lt;/span&gt;&#10;    @enderror&#10;&lt;/label&gt;" description="Laravel Livewire Line Input Bootstrap 4" toReformat="true" toShortenFQNames="true">
+  <template name="lvlinput" value="&lt;label for=&quot;$FIELD$&quot;&gt;&#10;    &lt;input&#10;            wire:key=&quot;$ARRAY$.{{ $$$INDEX$ }}.$FIELD$&quot;&#10;            wire:model.debounce.500ms=&quot;$ARRAY$.{{ $$$INDEX$ }}.$FIELD$&quot;&#10;            type=&quot;number&quot;&#10;            placeholder=&quot;$CAPTION$&quot;&#10;            class=&quot;$FIELD$ form-control form-control-sm text-right @error(&quot;$ARRAY$.{$$$INDEX$}.$FIELD$&quot;) is-invalid @enderror&quot;&#10;            name=&quot;$FIELD$&quot;&#10;            value=&quot;{{ old(&quot;$FIELD$&quot;) }}&quot;&#10;    /&gt;&#10;    @error(&quot;$ARRAY$.{$$$INDEX$}.$FIELD$&quot;)&#10;    &lt;span class=&quot;invalid-feedback&quot;&gt;&#10;        {{ $$message }}&#10;    &lt;/span&gt;&#10;    @enderror&#10;&lt;/label&gt;" description="Laravel Livewire Line Input Bootstrap 4" toReformat="true" toShortenFQNames="true">
     <variable name="FIELD" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="ARRAY" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="INDEX" expression="" defaultValue="" alwaysStopAt="true" />
@@ -313,6 +313,173 @@
     <context>
       <option name="HTML_TEXT" value="true" />
       <option name="VUE_TEMPLATE" value="true" />
+    </context>
+  </template>
+  <template name="langapp" value="@lang(&quot;application.$KEY$&quot;)$END$" description="Laravel Language Localization Lang Application" toReformat="true" toShortenFQNames="true">
+    <variable name="KEY" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML" value="true" />
+      <option name="VUE_TEMPLATE" value="true" />
+    </context>
+  </template>
+  <template name="lwf" value="&lt;form wire:submit.prevent=&quot;onFormSubmit&quot;&gt;&#10;    $END$&#10;&lt;/form&gt;" description="Laravel Livewire Form" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="HTML_TEXT" value="true" />
+      <option name="VUE_TEMPLATE" value="true" />
+    </context>
+  </template>
+  <template name="butbut" value="&lt;button type=&quot;button&quot;&gt;&#10;    $END$&#10;&lt;/button&gt;" description="button[type=&quot;button&quot;]" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="HTML_TEXT" value="true" />
+      <option name="VUE_TEMPLATE" value="true" />
+    </context>
+  </template>
+  <template name="blwp" value="@push(&quot;scripts&quot;)&#10;    &lt;script type=&quot;application/javascript&quot;&gt;&#10;        document.addEventListener(&quot;livewire:load&quot;, function (event) {&#10;            window.livewire.hook(&quot;afterDomUpdate&quot;, () =&gt; {&#10;            &#10;            });&#10;        });&#10;    &lt;/script&gt;&#10;@endpush" description="Blade Livewire Push Hook" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="HTML_TEXT" value="true" />
+      <option name="VUE_TEMPLATE" value="true" />
+    </context>
+  </template>
+  <template name="pdump" value="@php&#10;    dump($END$)&#10;@endphp" description="Blade PHP Dump" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="HTML_TEXT" value="true" />
+      <option name="VUE_TEMPLATE" value="true" />
+    </context>
+  </template>
+  <template name="shx" value="{{ $$upaya_kesehatan-&gt;item_rencana_usulan_kegiatan-&gt;$FIELD$ }}" description="" toReformat="true" toShortenFQNames="true">
+    <variable name="FIELD" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="true" />
+      <option name="VUE_TEMPLATE" value="true" />
+    </context>
+  </template>
+  <template name="sha" value="&lt;label for=&quot;$FIELD$&quot;&gt;&#10;        &lt;textarea&#10;                id=&quot;item_{{ &quot;{$$loop-&gt;parent-&gt;index}{$$loop-&gt;index}&quot; }}&quot;&#10;                type=&quot;text&quot;&#10;                placeholder=&quot;$LABEL$&quot;&#10;                class=&quot;form-control @error(&quot;$FIELD$&quot;) is-invalid @enderror&quot;&#10;                name=&quot;item[{{ &quot;{$$loop-&gt;parent-&gt;index}{$$loop-&gt;index}&quot; }}]$FIELD$&quot;&#10;        &gt;{{ old(&quot;$FIELD$&quot;) }}&lt;/textarea&gt;&#10;    @error(&quot;$FIELD$&quot;)&#10;    &lt;span class=&quot;invalid-feedback&quot;&gt;&#10;            {{ $$message }}&#10;        &lt;/span&gt;&#10;    @enderror&#10;&lt;/label&gt;" description="" toReformat="true" toShortenFQNames="true">
+    <variable name="FIELD" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="LABEL" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="true" />
+      <option name="VUE_TEMPLATE" value="true" />
+    </context>
+  </template>
+  <template name="sh" value="{{ $items[$upaya_kesehatan-&gt;id]-&gt;$FIELD$ }}" description="" toReformat="true" toShortenFQNames="true">
+    <variable name="FIELD" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="true" />
+      <option name="VUE_TEMPLATE" value="true" />
+    </context>
+  </template>
+  <template name="btext" value="&lt;div class=&quot;form-group&quot;&gt;&#10;    &lt;label for=&quot;$FIELD$&quot;&gt; $LABEL$: &lt;/label&gt;&#10;    &lt;textarea&#10;            id=&quot;$FIELD$&quot;&#10;            type=&quot;text&quot;&#10;            placeholder=&quot;$LABEL$&quot;&#10;            class=&quot;form-control @error(&quot;$FIELD$&quot;) is-invalid @enderror&quot;&#10;            name=&quot;$FIELD$&quot;&#10;    &gt;{{ old(&quot;$FIELD$&quot;) }}&lt;/textarea&gt;&#10;    @error(&quot;$FIELD$&quot;)&#10;    &lt;span class=&quot;invalid-feedback&quot;&gt;&#10;        {{ $message }}&#10;    &lt;/span&gt;&#10;    @enderror&#10;&lt;/div&gt;" description="" toReformat="true" toShortenFQNames="true">
+    <variable name="FIELD" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="LABEL" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="true" />
+      <option name="VUE_TEMPLATE" value="true" />
+    </context>
+  </template>
+  <template name="hic" value="&lt;div class=&quot;icon baseline&quot;&gt;&#10;    &lt;x-heroicon-o-trash/&gt;&#10;&lt;/div&gt;" description="Blade Heroicon" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="HTML_TEXT" value="true" />
+      <option name="VUE_TEMPLATE" value="true" />
+    </context>
+  </template>
+  <template name="svg-icon-system" value="/*SVG ICON SYSTEM*/&#10;.icon {&#10;  display: inline-flex;&#10;  align-self: center;&#10;}&#10;&#10;.icon svg, .icon img {&#10;  height: 1em;&#10;  width: 1em;&#10;  fill: currentColor;&#10;}&#10;&#10;.icon.baseline svg, .icon img {&#10;  top: .125em;&#10;  position: relative;&#10;}" description="SVG Icon System" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="CSS_RULESET_LIST" value="true" />
+    </context>
+  </template>
+  <template name="bulsub" value="&lt;div class=&quot;has-text-right&quot;&gt;&#10;    &lt;button class=&quot;button is-info&quot;&gt;&#10;        $SUBMIT$&#10;    &lt;/button&gt;&#10;&lt;/div&gt;" description="Bulma Submit Button" toReformat="true" toShortenFQNames="true">
+    <variable name="SUBMIT" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="true" />
+      <option name="VUE_TEMPLATE" value="true" />
+    </context>
+  </template>
+  <template name="bulsele" value="&lt;div class=&quot;field&quot;&gt;&#10;    &lt;label class=&quot;label&quot; for=&quot;$FIELD$&quot;&gt; $CAPTION$ &lt;/label&gt;&#10;    &lt;div class=&quot;control @error('$FIELD$') is-danger @enderror&quot;&gt;&#10;        &lt;div class=&quot;select&quot;&gt;&#10;            &lt;select name=&quot;$FIELD$&quot; id=&quot;$FIELD$&quot;&gt;&#10;                @foreach ($$$ITEM$s as $$$ITEM$)&#10;                    &lt;option value=&quot;{{ $$$ITEM$-&gt;id }}&quot;&gt;&#10;                        {{ $$$ITEM$-&gt;$NAME$ }}&#10;                    &lt;/option&gt;&#10;                @endforeach&#10;            &lt;/select&gt;&#10;        &lt;/div&gt;&#10;    &lt;/div&gt;&#10;    @error(&quot;$FIELD$&quot;)&#10;        &lt;p class=&quot;help is-danger&quot;&gt;&#10;            {{ $$message }}&#10;        &lt;/p&gt;&#10;    @enderror&#10;&lt;/div&gt;" description="Bulma Blade Select" toReformat="true" toShortenFQNames="true">
+    <variable name="FIELD" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="CAPTION" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="ITEM" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="true" />
+      <option name="VUE_TEMPLATE" value="true" />
+    </context>
+  </template>
+  <template name="homeswitch" value="public static function home()&#10;{&#10;    /** @var User $user */&#10;    $user = Auth::user();&#10;&#10;    switch ($user-&gt;level ?? null) {&#10;        case User::LEVEL_REGULAR:&#10;        default:&#10;            return null;&#10;    }&#10;}" description="Laravel Home Route Switcher" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="PHP Class Member" value="true" />
+    </context>
+  </template>
+  <template name="fid" value="$table-&gt;foreignId('$ENTITY$_id')-&gt;constrained()-&gt;index();" description="Laravel Migration Foreign ID" toReformat="true" toShortenFQNames="true">
+    <variable name="ENTITY" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP Expression" value="true" />
+      <option name="PHP Statement" value="true" />
+    </context>
+  </template>
+  <template name="custqbuilder" value="/** return \App\QueryBuilders\$ENTITY$Builder */&#10;public function newEloquentBuilder($$query)&#10;{&#10;    return new \App\QueryBuilders\$ENTITY$Builder($$query);&#10;}&#10;&#10;public static function query(): \App\QueryBuilders\$ENTITY$Builder&#10;{&#10;    return parent::query();&#10;}" description="Eloquent Custom Query Builder" toReformat="true" toShortenFQNames="true">
+    <variable name="ENTITY" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP Class Member" value="true" />
+    </context>
+  </template>
+  <template name="alpsubmitmodal" value="x-data=&quot;{}&quot;&#10;@submit.prevent=&quot;confirmDialog().then(res =&gt; res.isConfirmed &amp;&amp; $event.target.submit())&quot;" description="Alpine Submit Sweetalert Modal" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="HTML" value="true" />
+      <option name="HTML_TEXT" value="false" />
+    </context>
+  </template>
+  <template name="todo" value="/* TODO: $CONTENT$ */" description="Insert TODO Comment" toReformat="true" toShortenFQNames="true">
+    <variable name="CONTENT" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+      <option name="PHP Comment" value="false" />
+    </context>
+  </template>
+  <template name="todob" value="{{-- TODO: $TODO_TEXT$ --}}" description="Blade TODO comment" toReformat="true" toShortenFQNames="true">
+    <variable name="TODO_TEXT" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="true" />
+    </context>
+  </template>
+  <template name="pest" value="test(&quot;$DESCRIPTION$&quot;, function () {&#10;    $CURRENT$&#10;});" description="" toReformat="true" toShortenFQNames="true">
+    <variable name="DESCRIPTION" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="CURRENT" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP Expression" value="true" />
+      <option name="PHP Statement" value="true" />
+    </context>
+  </template>
+  <template name="liveHook" value="document.addEventListener(&quot;livewire:load&quot;, function(event) {&#10;    window.Livewire.hook('message.processed', () =&gt; {&#10;        window.setTimeout(() =&gt; {&#10;            &#10;        }, 0)&#10;    });&#10;});" description="Laravel Livewire Hook" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="ES6_STATEMENT" value="true" />
+      <option name="ES6_TOP_LEVEL_STATEMENT" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+      <option name="JS_TOP_LEVEL_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="xdel" value="&lt;x-delete-button&#10;    eventName=&quot;delete&quot;&#10;    :eventPayload=&quot;$$$ITEM$-&gt;id&quot;&#10;&gt;&#10;    @lang(&quot;application.delete&quot;)&#10;&lt;/x-delete-button&gt;" description="The delete component." toReformat="true" toShortenFQNames="true">
+    <variable name="ITEM" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="true" />
+    </context>
+  </template>
+  <template name="srunique" value="[&quot;required&quot;, &quot;string&quot;, Rule::unique($MODEL$::class), &quot;max:1000&quot;]" description="Laravel Validation Rule for Unique Strings" toReformat="true" toShortenFQNames="true">
+    <variable name="MODEL" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP Expression" value="true" />
+    </context>
+  </template>
+  <template name="at" value="$this-&gt;assertTrue(true);" description="Assert True" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="PHP Expression" value="true" />
+      <option name="PHP Statement" value="true" />
+    </context>
+  </template>
+  <template name="dj" value="dump(&#10;    $$$item$-&gt;toJson(JSON_PRETTY_PRINT)&#10;);" description="Dump Json" toReformat="true" toShortenFQNames="true">
+    <variable name="item" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP Expression" value="true" />
+      <option name="PHP Statement" value="true" />
     </context>
   </template>
 </templateSet>
