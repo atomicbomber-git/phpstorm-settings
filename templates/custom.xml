@@ -1,0 +1,48 @@
+<templateSet group="custom">
+  <template name="psr4" value="&quot;psr-4&quot;: {&#10;        &quot;App\\&quot;: &quot;app/&quot;&#10;        }" description="" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="JSON" value="true" />
+      <option name="JSON_PROPERTY_KEYS" value="false" />
+      <option name="JSON_STRING_VALUES" value="false" />
+    </context>
+  </template>
+  <template name="laravel-foreign-key" value="$table-&gt;unsignedInteger('$entity$_id')-&gt;index();&#10;$table-&gt;foreign('$entity$_id')-&gt;references('id')-&gt;on('$entity$s');" description="" toReformat="true" toShortenFQNames="true">
+    <variable name="entity" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP Expression" value="true" />
+      <option name="PHP Statement" value="true" />
+    </context>
+  </template>
+  <template name="binput" value="&lt;div class=&quot;form-group&quot;&gt;&#10;    &lt;label for=&quot;$field$&quot;&gt; $Label$: &lt;/label&gt;&#10;    &lt;input&#10;        id=&quot;$field$&quot;&#10;        type=&quot;text&quot;&#10;        placeholder=&quot;$Label$&quot;&#10;        class=&quot;form-control @error(&quot;$field$&quot;) is-invalid @enderror&quot;&#10;        name=&quot;$field$&quot;&#10;        value=&quot;{{ old(&quot;$field$&quot;) }}&quot;&#10;    /&gt;&#10;    @error(&quot;$field$&quot;)&#10;    &lt;span class=&quot;invalid-feedback&quot;&gt;&#10;        {{ $message }}&#10;    &lt;/span&gt;&#10;    @enderror&#10;&lt;/div&gt;" description="Bootstrap Regular &lt;input&gt;" toReformat="true" toShortenFQNames="true">
+    <variable name="field" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="Label" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="true" />
+      <option name="VUE_TEMPLATE" value="true" />
+    </context>
+  </template>
+  <template name="fupdate" value="&lt;form action=&quot;{{ route(&quot;$entity$.update&quot;, $$$entity$) }}&quot; method=&quot;post&quot;&gt;&#10;    @csrf&#10;    @method(&quot;PUT&quot;)&#10;    &#10;    $content$&#10;&lt;/form&gt;" description="Blade Update Form" toReformat="true" toShortenFQNames="true">
+    <variable name="entity" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="content" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="true" />
+      <option name="VUE_TEMPLATE" value="true" />
+    </context>
+  </template>
+  <template name="rredirect" value="return redirect()&#10;    -&gt;route(&quot;$entity$.$action$&quot;, $$$entity$)&#10;    -&gt;with(&quot;messages&quot;, [&#10;        [&#10;            &quot;state&quot; =&gt; MessageState::STATE_SUCCESS,&#10;            &quot;content&quot; =&gt; __(&quot;messages.$action2$.success&quot;)&#10;        ]&#10;    ]);" description="" toReformat="true" toShortenFQNames="true">
+    <variable name="entity" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="action" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="action2" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP Expression" value="true" />
+      <option name="PHP Statement" value="true" />
+    </context>
+  </template>
+  <template name="jqvpost" value="$.post(this.submit_url, {token: window.token, ...this.final_form})&#10;    .done(response =&gt; {&#10;        this.error_data = null;&#10;        window.location.replace(this.redirect_url);&#10;    })&#10;    .fail((xhr, status, error) =&gt; {&#10;        let response = JSON.parse(xhr.responseText);&#10;        this.error_data = response.data;&#10;    });" description="jQuery Vue AJAX POST" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="ES6_STATEMENT" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+      <option name="VUE_COMPONENT_DESCRIPTOR" value="true" />
+    </context>
+  </template>
+</templateSet>

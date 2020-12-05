@@ -1,0 +1,12 @@
+<application>
+  <component name="FileTypeManager" version="18">
+    <extensionMap>
+      <mapping ext="ods" type="Native" />
+      <mapping pattern="TODO" type="PLAIN_TEXT" />
+      <mapping pattern=".env.acceptance" type="PLAIN_TEXT" />
+      <mapping pattern="inline-textarea" type="PLAIN_TEXT" />
+      <mapping ext="postcss" type="PLAIN_TEXT" />
+      <mapping ext="fish" type="PLAIN_TEXT" />
+    </extensionMap>
+  </component>
+</application>

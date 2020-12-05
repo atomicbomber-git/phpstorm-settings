@@ -1,0 +1,41 @@
+<templateSet group="klik-ops">
+  <template name="vminput" value="&lt;div class=&quot;form-group&quot;&gt;&#10;    &lt;label for=&quot;$field$&quot;&gt;&#10;        $label$:&#10;    &lt;/label&gt;&#10;&#10;    &lt;input&#10;            id=&quot;$field$&quot;&#10;            v-model=&quot;$field$&quot;&#10;            placeholder=&quot;$label$&quot;&#10;            class=&quot;form-control&quot;&#10;            :class=&quot;{ error: get(this.error_data, '$field$[0]', false) }&quot;&#10;            type=&quot;text&quot;&#10;    /&gt;&#10;    &lt;label class=&quot;error&quot;&gt;&#10;        {{ get(this.error_data, '$field$[0]', '') }}&#10;    &lt;/label&gt;&#10;&lt;/div&gt;" description="" toReformat="true" toShortenFQNames="true">
+    <variable name="field" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="label" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="true" />
+      <option name="VUE_TEMPLATE" value="true" />
+    </context>
+  </template>
+  <template name="errorField" value="&lt;label class=&quot;error&quot;&gt;&#10;    {{ get(this.error_data, '$field$[0]', '') }}&#10;&lt;/label&gt;" description="Vue Milestone Error Field" toReformat="true" toShortenFQNames="true">
+    <variable name="field" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="true" />
+      <option name="VUE_TEMPLATE" value="true" />
+    </context>
+  </template>
+  <template name="mbinput" value="&lt;div class=&quot;form-group&quot;&gt;&#10;    &lt;label for=&quot;$field$&quot;&gt; $Label$: &lt;/label&gt;&#10;    &lt;input name=&quot;$field$&quot;&#10;           id=&quot;$field$&quot;&#10;           type=&quot;text&quot;&#10;           class=&quot;form-control &lt;?= $this-&gt;has_error(&quot;$field$&quot;) ? &quot;error&quot; : &quot;&quot; ?&gt;&quot;&#10;           placeholder=&quot;$Label$&quot;&#10;           value=&quot;&lt;?= $this-&gt;old(&quot;$field$&quot;) ?&gt;&quot;&gt;&#10;    &lt;?php if ($this-&gt;has_error(&quot;$field$&quot;)) : ?&gt;&#10;        &lt;label class='error'&gt;&#10;            &lt;?= $this-&gt;error(&quot;$field$&quot;)[0] ?? '' ?&gt;&#10;        &lt;/label&gt;&#10;    &lt;?php endif ?&gt;&#10;&lt;/div&gt;" description="" toReformat="true" toShortenFQNames="true">
+    <variable name="field" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="Label" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="true" />
+      <option name="VUE_TEMPLATE" value="true" />
+    </context>
+  </template>
+  <template name="mbform" value="&lt;form method=&quot;POST&quot;&#10;      action=&quot;&lt;?= base_url(&quot;$action$&quot;) ?&gt;&quot;&gt;&#10;    &lt;input type=&quot;hidden&quot;&#10;           name=&quot;&lt;?= $this-&gt;csrf_name() ?&gt;&quot;&#10;           value=&quot;&lt;?= $this-&gt;csrf_token() ?&gt;&quot;&gt;&#10;&lt;/form&gt;" description="" toReformat="true" toShortenFQNames="true">
+    <variable name="action" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="true" />
+      <option name="VUE_TEMPLATE" value="true" />
+    </context>
+  </template>
+  <template name="mbcreate" value="/** @var Translator $translator */&#10;$translator = resolve(Translator::class);&#10;&#10;/** @var \Illuminate\Contracts\Validation\\Illuminate\Contracts\Validation\Validator $validator */&#10;$validator = resolve(\Illuminate\Validation\Contracts\Factory::class)&#10;    -&gt;make(resolve(\Illuminate\Http\Request::class)-&gt;all(), [&#10;        $rules$&#10;    ]);&#10;&#10;$validator-&gt;fails() &amp;&amp; $this-&gt;errorUnprocessed($validator-&gt;errors());&#10;$data = $validator-&gt;validated();&#10;&#10;$Model$::create($data);&#10;&#10;resolve(\CI_Controller::class)&#10;    -&gt;session&#10;    -&gt;set_flashdata('message-success', $translator-&gt;get(&quot;action.create.success&quot;));&#10;&#10;$this-&gt;redirectBack(base_url(&quot;$route$&quot;));" description="Milestone Bootstrap Create Controller" toReformat="true" toShortenFQNames="true">
+    <variable name="rules" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="Model" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="route" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP Expression" value="true" />
+      <option name="PHP Statement" value="true" />
+    </context>
+  </template>
+</templateSet>

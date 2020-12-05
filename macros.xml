@@ -1,0 +1,8 @@
+<application>
+  <component name="ActionMacroManager">
+    <macro name="Reformat Everything">
+      <action id="ShowReformatFileDialog" />
+      <shortuct text="ENTER" />
+    </macro>
+  </component>
+</application>
