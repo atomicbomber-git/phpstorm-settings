@@ -703,14 +703,6 @@
             </plugin>
           </value>
         </entry>
-        <entry key="*.log">
-          <value>
-            <plugin>
-              <option name="myPluginId" value="com.intellij.ideolog" />
-              <option name="myPluginName" value="Ideolog" />
-            </plugin>
-          </value>
-        </entry>
         <entry key="*.markdown">
           <value>
             <plugin>
@@ -807,14 +799,6 @@
               <option name="myPluginId" value="com.intellij.platform.images" />
               <option name="myPluginName" value="com.intellij.platform.images" />
               <option name="myBundled" value="true" />
-            </plugin>
-          </value>
-        </entry>
-        <entry key="*.pcss">
-          <value>
-            <plugin>
-              <option name="myPluginId" value="org.intellij.plugins.postcss" />
-              <option name="myPluginName" value="PostCSS" />
             </plugin>
           </value>
         </entry>
@@ -1193,6 +1177,14 @@
               <option name="myPluginId" value="com.intellij" />
               <option name="myPluginName" value="IDEA CORE" />
               <option name="myBundled" value="true" />
+            </plugin>
+          </value>
+        </entry>
+        <entry key="*.toml">
+          <value>
+            <plugin>
+              <option name="myPluginId" value="org.toml.lang" />
+              <option name="myPluginName" value="Toml" />
             </plugin>
           </value>
         </entry>
@@ -1590,6 +1582,14 @@
             </plugin>
           </value>
         </entry>
+        <entry key="Cargo.lock">
+          <value>
+            <plugin>
+              <option name="myPluginId" value="org.toml.lang" />
+              <option name="myPluginName" value="Toml" />
+            </plugin>
+          </value>
+        </entry>
         <entry key="Dockerfile">
           <value>
             <plugin>
@@ -1632,6 +1632,22 @@
               <option name="myPluginId" value="Docker" />
               <option name="myPluginName" value="Docker" />
               <option name="myBundled" value="true" />
+            </plugin>
+          </value>
+        </entry>
+        <entry key="Gopkg.lock">
+          <value>
+            <plugin>
+              <option name="myPluginId" value="org.toml.lang" />
+              <option name="myPluginName" value="Toml" />
+            </plugin>
+          </value>
+        </entry>
+        <entry key="Pipfile">
+          <value>
+            <plugin>
+              <option name="myPluginId" value="org.toml.lang" />
+              <option name="myPluginName" value="Toml" />
             </plugin>
           </value>
         </entry>
@@ -1783,6 +1799,11 @@
                       <FeaturePluginData displayName="Compound" pluginName="IDEA CORE" pluginId="com.intellij" />
                     </value>
                   </entry>
+                  <entry key="CypressConfigurationType">
+                    <value>
+                      <FeaturePluginData displayName="Cypress" pluginName="Cypress Support" pluginId="me.mbolotov.cypress" />
+                    </value>
+                  </entry>
                   <entry key="DatabaseScript">
                     <value>
                       <FeaturePluginData displayName="Database Script" pluginName="Database Tools and SQL" pluginId="com.intellij.database" />
@@ -1831,6 +1852,11 @@
                   <entry key="PHPUnitRunConfigurationType">
                     <value>
                       <FeaturePluginData displayName="PHPUnit" pluginName="PHP" pluginId="com.jetbrains.php" />
+                    </value>
+                  </entry>
+                  <entry key="PestRunConfigurationType">
+                    <value>
+                      <FeaturePluginData displayName="Pest" pluginName="Pest" pluginId="com.pestphp.pest-intellij" />
                     </value>
                   </entry>
                   <entry key="PhpBehatConfigurationType">
