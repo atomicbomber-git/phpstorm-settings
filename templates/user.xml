@@ -215,7 +215,7 @@
       <option name="VUE_TEMPLATE" value="true" />
     </context>
   </template>
-  <template name="lvlinput" value="&lt;label for=&quot;$FIELD$&quot;&gt;&#10;    &lt;input&#10;            id=&quot;$FIELD$&quot;&#10;            wire:key=&quot;$ARRAY$.{{ $$$INDEX$ }}.$FIELD$&quot;&#10;            wire:model=&quot;$ARRAY$.{{ $$$INDEX$ }}.$FIELD$&quot;&#10;            type=&quot;number&quot;&#10;            placeholder=&quot;$CAPTION$&quot;&#10;            class=&quot;form-control form-control-sm text-right @error(&quot;$ARRAY$.{$$$INDEX$}.$FIELD$&quot;) is-invalid @enderror&quot;&#10;            name=&quot;$FIELD$&quot;&#10;            value=&quot;{{ old(&quot;$FIELD$&quot;) }}&quot;&#10;    /&gt;&#10;    @error(&quot;$ARRAY$.{$$$INDEX$}.$FIELD$&quot;)&#10;    &lt;span class=&quot;invalid-feedback&quot;&gt;&#10;        {{ $$message }}&#10;    &lt;/span&gt;&#10;    @enderror&#10;&lt;/label&gt;" description="Laravel Livewire Line Input Bootstrap 4" toReformat="true" toShortenFQNames="true">
+  <template name="lvlinput" value="&lt;label for=&quot;$FIELD$&quot;&gt;&#10;    &lt;input&#10;            wire:key=&quot;$ARRAY$.{{ $$$INDEX$ }}.$FIELD$&quot;&#10;            wire:model.debounce.500ms=&quot;$ARRAY$.{{ $$$INDEX$ }}.$FIELD$&quot;&#10;            type=&quot;number&quot;&#10;            placeholder=&quot;$CAPTION$&quot;&#10;            class=&quot;$FIELD$ form-control form-control-sm text-right @error(&quot;$ARRAY$.{$$$INDEX$}.$FIELD$&quot;) is-invalid @enderror&quot;&#10;            name=&quot;$FIELD$&quot;&#10;            value=&quot;{{ old(&quot;$FIELD$&quot;) }}&quot;&#10;    /&gt;&#10;    @error(&quot;$ARRAY$.{$$$INDEX$}.$FIELD$&quot;)&#10;    &lt;span class=&quot;invalid-feedback&quot;&gt;&#10;        {{ $$message }}&#10;    &lt;/span&gt;&#10;    @enderror&#10;&lt;/label&gt;" description="Laravel Livewire Line Input Bootstrap 4" toReformat="true" toShortenFQNames="true">
     <variable name="FIELD" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="ARRAY" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="INDEX" expression="" defaultValue="" alwaysStopAt="true" />
@@ -444,6 +444,39 @@
   <template name="pest" value="test(&quot;$DESCRIPTION$&quot;, function () {&#10;    $CURRENT$&#10;});" description="" toReformat="true" toShortenFQNames="true">
     <variable name="DESCRIPTION" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="CURRENT" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP Expression" value="true" />
+      <option name="PHP Statement" value="true" />
+    </context>
+  </template>
+  <template name="liveHook" value="document.addEventListener(&quot;livewire:load&quot;, function(event) {&#10;    window.Livewire.hook('message.processed', () =&gt; {&#10;        window.setTimeout(() =&gt; {&#10;            &#10;        }, 0)&#10;    });&#10;});" description="Laravel Livewire Hook" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="ES6_STATEMENT" value="true" />
+      <option name="ES6_TOP_LEVEL_STATEMENT" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+      <option name="JS_TOP_LEVEL_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="xdel" value="&lt;x-delete-button&#10;    eventName=&quot;delete&quot;&#10;    :eventPayload=&quot;$$$ITEM$-&gt;id&quot;&#10;&gt;&#10;    @lang(&quot;application.delete&quot;)&#10;&lt;/x-delete-button&gt;" description="The delete component." toReformat="true" toShortenFQNames="true">
+    <variable name="ITEM" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="true" />
+    </context>
+  </template>
+  <template name="srunique" value="[&quot;required&quot;, &quot;string&quot;, Rule::unique($MODEL$::class), &quot;max:1000&quot;]" description="Laravel Validation Rule for Unique Strings" toReformat="true" toShortenFQNames="true">
+    <variable name="MODEL" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP Expression" value="true" />
+    </context>
+  </template>
+  <template name="at" value="$this-&gt;assertTrue(true);" description="Assert True" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="PHP Expression" value="true" />
+      <option name="PHP Statement" value="true" />
+    </context>
+  </template>
+  <template name="dj" value="dump(&#10;    $$$item$-&gt;toJson(JSON_PRETTY_PRINT)&#10;);" description="Dump Json" toReformat="true" toShortenFQNames="true">
+    <variable name="item" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="PHP Expression" value="true" />
       <option name="PHP Statement" value="true" />
